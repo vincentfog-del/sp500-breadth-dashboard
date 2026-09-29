@@ -2,8 +2,14 @@ name: Update S&P 500 breadth
 
 on:
   workflow_dispatch:
+  push:                          # 程式或排程設定有改動時立刻跑一次
+    branches: [main]
+    paths:
+      - indicators/sp500_updown.py
+      - .github/workflows/update.yml
   schedule:
-    - cron: "7,37 13-22 * * 1-5"
+    # 盤中每 15 分鐘（UTC 13:00–21:45，同時涵蓋美國夏令與冬令的開盤時段，收盤後也會跑到正式值）
+    - cron: "2,17,32,47 13-21 * * 1-5"
 
 concurrency:
   group: sp500-data-update
@@ -29,5 +35,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/
-          git diff --cached --quiet || git commit -m "data: update S&P 500 breadth"
+          git diff --cached --quiet && exit 0
+          git commit -m "data: update S&P 500 breadth"
+          git pull --rebase
           git push

@@ -44,7 +44,7 @@ async function load(){
   const [latest,history,intraday]=await Promise.all([json('data/latest.json',{}),json('data/history.json',[]),json('data/intraday.json',[])]);
   if(latest.up_pct==null){$('badge').textContent='尚無資料';$('updated').textContent='請先在 GitHub Actions 執行一次 Update workflow';draw([]);return}
   const live=latest.status==='intraday';$('badge').textContent=live?'盤中暫定':'正式收盤';$('badge').className=live?'live':'closed';
-  $('session').textContent=latest.session;$('upPct').textContent=latest.up_pct.toFixed(1)+'%';$('upBar').style.width=latest.up_pct+'%';
+  $('session').textContent=`${latest.session}　・　資料時間 ${new Intl.DateTimeFormat('zh-TW',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Taipei'}).format(new Date(latest.generated_at))}`;$('upPct').textContent=latest.up_pct.toFixed(1)+'%';$('upBar').style.width=latest.up_pct+'%';
   ['up','down','flat'].forEach(k=>$(k).textContent=latest[k]);$('updated').textContent=`更新：${fmtTime(latest.generated_at)}｜有效成分股 ${latest.total} 檔`;
   allPoints=[...history];if(live){const current=intraday.at(-1)||latest;allPoints=allPoints.filter(p=>p.session!==current.session);allPoints.push(current)}
   allPoints.sort((a,b)=>a.session.localeCompare(b.session));setRange(selectedDays);
