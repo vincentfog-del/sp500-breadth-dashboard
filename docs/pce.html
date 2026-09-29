@@ -73,8 +73,11 @@
   .explain { font-size: 13px; color: var(--muted); margin: 6px 0 0; line-height: 1.6; }
 
   .items { list-style: none; padding: 0; margin: 10px 0 0; }
-  .items li { display: grid; grid-template-columns: 1fr 64px 52px; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px solid var(--grid); font-size: 13px; }
-  .items li:first-child { border-top: 0; }
+  .items li { display: grid; grid-template-columns: 1fr 44px 54px 50px; align-items: center; gap: 8px; padding: 6px 0; border-top: 1px solid var(--grid); font-size: 13px; }
+  .items li.hd { font-size: 11px; color: var(--muted); padding: 2px 0 4px; border-top: 0; }
+  .items li.hd span { text-align: right; }
+  .items .wt { text-align: right; color: var(--muted); font-size: 12px; }
+  .items li:first-child, .items li.hd + li { border-top: 0; }
   .items .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .items .bar { height: 6px; border-radius: 3px; background: var(--grid); overflow: hidden; }
   .items .bar b { display: block; height: 100%; border-radius: 3px; }
@@ -163,6 +166,7 @@
         <div><h3>漲最多</h3><ul class="items" id="topList"></ul></div>
         <div><h3>漲最少／下跌</h3><ul class="items" id="botList"></ul></div>
       </div>
+      <p class="explain">「佔支出」＝該項目金額佔全部細項消費支出的比重。比重越大，對整體 PCE 年增率的影響越大；例如佔 1% 的項目漲 10%，大約會把整體推高 0.1 個百分點。</p>
     </section>
   </div>
 
@@ -331,7 +335,7 @@ function drawDist() {
     const rect = svg.getBoundingClientRect(), cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
     const i = Math.max(0, Math.min(bins.length - 1, Math.floor((cx - P.l) / bw))), b = bins[i];
     const range = i === 0 ? `低於 ${b.b}%` : i === bins.length - 1 ? `${b.a}% 以上` : `${b.a}% ～ ${b.b}%`;
-    const ex = b.items.slice().sort((p, q) => q.w - p.w).slice(0, 3).map(d => `${esc(zh(d.name))}（${d.yoy.toFixed(1)}%）`);
+    const ex = b.items.slice().sort((p, q) => q.w - p.w).slice(0, 3).map(d => `${esc(zh(d.name))}（${d.yoy.toFixed(1)}%，佔 ${fmtW(d.w)}）`);
     tip.innerHTML = `<b>${range}：${b.items.length} 項</b>` + (ex.length ? `<br>${ex.join("<br>")}` : "");
     tip.style.opacity = 1;
     const half = tip.offsetWidth / 2, x = P.l + (i + .5) * bw;
@@ -346,10 +350,14 @@ function drawLists() {
   const items = D.dist.filter(d => d.yoy != null), mx = Math.max(...items.map(d => Math.abs(d.yoy)), 1);
   const li = d => `<li><span class="nm" title="${esc(d.name)}">${esc(zh(d.name))}</span>` +
     `<span class="bar"><b style="width:${Math.abs(d.yoy) / mx * 100}%;background:${d.yoy > D.threshold ? css("--s1") : css("--dim")}"></b></span>` +
-    `<span class="v">${d.yoy > 0 ? "+" : ""}${d.yoy.toFixed(1)}%</span></li>`;
-  $("topList").innerHTML = items.slice(0, 8).map(li).join("");
-  $("botList").innerHTML = items.slice(-8).reverse().map(li).join("");
+    `<span class="v">${d.yoy > 0 ? "+" : ""}${d.yoy.toFixed(1)}%</span>` +
+    `<span class="wt">${fmtW(d.w)}</span></li>`;
+  const hd = `<li class="hd"><span style="text-align:left">項目</span><span></span><span>年增率</span><span>佔支出</span></li>`;
+  $("topList").innerHTML = hd + items.slice(0, 8).map(li).join("");
+  $("botList").innerHTML = hd + items.slice(-8).reverse().map(li).join("");
 }
+// 佔支出比重：太小的多顯示一位小數，避免都變成 0.0%
+const fmtW = w => w == null ? "—" : w >= 1 ? `${w.toFixed(1)}%` : w >= 0.1 ? `${w.toFixed(2)}%` : w >= 0.01 ? `${w.toFixed(2)}%` : "<0.01%";
 const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
 document.querySelectorAll(".tabs").forEach(t => t.addEventListener("click", e => {
