@@ -36,7 +36,7 @@ COUNTS = DATA / "ad_counts.json"
 A_FAST, A_SLOW = 0.10, 0.05
 WARMUP = 150          # 暖機天數：之前的數值不輸出
 SHOW_DAYS = 520       # 輸出最近幾個交易日
-CHUNK = 250
+CHUNK = 200
 
 
 def gh(kind, msg):
@@ -126,7 +126,7 @@ VARIANTS = {
     "no_etf": {"common", "preferred", "warrant", "right", "unit"},
     "all": {"common", "preferred", "warrant", "right", "unit", "etf"},
 }
-PREFERRED = {"nyse": "no_etf", "nasdaq": "no_etf"}
+PREFERRED = {"nyse": "no_etf", "nasdaq": "all"}   # Nasdaq 含 ETF 與 StockCharts $NASI 最接近（2026/9/28：−538 vs −517）
 
 
 def universes() -> dict[str, dict[str, str]]:
@@ -194,6 +194,16 @@ def update_counts(cache: dict, key: str, uni: dict[str, str]) -> dict[str, pd.Da
     tickers = sorted(uni)
     print(f"{key}: {len(tickers)} 檔，下載 {period} ...")
     close = download(tickers, period)
+    # Yahoo 偶爾會暫時限制下載頻率，抓不到的等一下再補抓（最多兩輪）
+    for rnd in (1, 2):
+        miss = [t for t in tickers if t not in close.columns or close[t].isna().all()]
+        if len(miss) < max(20, len(tickers) * 0.03):
+            break
+        print(f"{key}: 第 {rnd} 輪補抓 {len(miss)} 檔 ...")
+        time.sleep(45 * rnd)
+        again = download(miss, period)
+        keep = [c for c in again.columns if again[c].notna().any()]
+        close = close.drop(columns=[c for c in keep if c in close.columns]).join(again[keep], how="outer")
     ok = set(close.columns[close.notna().any()])
     by_cat = {}
     for t, c in uni.items():
@@ -239,7 +249,7 @@ def main():
             if len(df) <= WARMUP:
                 raise RuntimeError(f"{name} 歷史只有 {len(df)} 天，不足以暖機")
             m = mcclellan(df)
-            result["markets"][key] = {"name": name, "universe": f"{name} 上市證券（不含 ETF）", "series": to_series(m)}
+            result["markets"][key] = {"name": name, "universe": f"{name} 上市證券" + ("（含 ETF）" if PREFERRED[key] == "all" else "（不含 ETF）"), "series": to_series(m)}
             # 各範圍比對：列出最近幾天的總和指標，方便和 StockCharts 對照
             cmp = []
             for v, vdf in variants.items():
