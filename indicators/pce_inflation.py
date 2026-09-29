@@ -262,6 +262,10 @@ def main():
     print("下載 BEA 名目支出（U20405）...")
     nominal = fetch_table("U20405", years, key)
     for name, df in (("U20404", price), ("U20405", nominal)):
+        if os.environ.get("PCE_DEBUG_DUMP"):
+            dump = ROOT / "debug" / f"{name}.csv.gz"
+            dump.parent.mkdir(exist_ok=True)
+            df.to_csv(dump, index=False, compression="gzip")
         per = sorted(df["period"].unique())
         d = df.drop_duplicates("line").sort_values("line")
         gh("notice", f"{name}: {len(df)} 筆, {d.shape[0]} 行, 期間 {per[0]}~{per[-1]}, "
