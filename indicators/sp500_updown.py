@@ -6,9 +6,8 @@ import os
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from typing import Any
-
-import pandas as pd
+from typing import Anyimport pandas as pd
+import requests
 import pandas_market_calendars as mcal
 import yfinance as yf
 
@@ -37,7 +36,9 @@ def get_constituents() -> list[str]:
     """Fetch the current index members; use the last cached list if Wikipedia is unavailable."""
     cache = DATA_DIR / "constituents.json"
     try:
-        table = pd.read_html(WIKI_URL, attrs={"id": "constituents"})[0]
+        response = requests.get(WIKI_URL, headers={"User-Agent": "Mozilla/5.0 market-breadth-dashboard"}, timeout=30)
+        response.raise_for_status()
+        table = pd.read_html(response.text, attrs={"id": "constituents"})[0]
         tickers = sorted(table["Symbol"].astype(str).str.replace(".", "-", regex=False).tolist())
         if len(tickers) < 490:
             raise RuntimeError(f"unexpected constituent count: {len(tickers)}")
