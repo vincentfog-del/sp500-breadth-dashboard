@@ -192,7 +192,8 @@ def compute(price, nominal):
     checks = full[-3:] + [next((c for c in full if c >= "2019-06"), full[0])]
     vals = nw.loc[[l for l, _ in lines], checks].to_numpy().tolist()
     root, used = build_tree(lines, vals)
-    leaf_nodes = leaves(root)
+    # 排除金額為負的調整項（例如二手車的 Employee reimbursement），它們不是實際的消費品項
+    leaf_nodes = [x for x in leaves(root) if (nw.loc[x["line"], checks[:3]] > 0).all()]
     leaf_lines = [x["line"] for x in leaf_nodes]
     names = {x["line"]: x["desc"] for x in leaf_nodes}
 
