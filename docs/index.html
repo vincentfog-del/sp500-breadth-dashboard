@@ -16,7 +16,12 @@
       <div class="bar"><i id="upBar"></i></div>
       <div class="counts"><span class="up">▲ <b id="up">—</b> 上漲</span><span class="flat">— <b id="flat">—</b> 平盤</span><span class="down">▼ <b id="down">—</b> 下跌</span></div>
     </section>
-    <section class="card"><div class="section-title"><h2 id="chartTitle">近期走勢</h2><span>0–100%</span></div><canvas id="chart" height="230"></canvas></section>
+    <section class="card chart-card">
+      <div class="section-title"><div><h2 id="chartTitle">過去兩年收盤走勢</h2><p>每日 S&amp;P 500 成分股上漲比例</p></div><span>0–100%</span></div>
+      <div class="ranges" role="group" aria-label="線圖期間"><button data-days="31">1月</button><button data-days="93">3月</button><button data-days="186">6月</button><button data-days="366">1年</button><button class="active" data-days="731">2年</button></div>
+      <div class="chart-wrap"><canvas id="chart" height="300"></canvas><div id="tooltip" class="tooltip" hidden></div></div>
+      <div class="legend"><i></i><span>上漲家數比例</span><em>50% 多空分界</em></div>
+    </section>
     <p id="updated" class="updated">等待資料…</p>
     <p class="note">盤中數值以當下最新價相對前一交易日收盤計算，屬暫定資料；收盤後會更新為正式值。</p>
   </main>
