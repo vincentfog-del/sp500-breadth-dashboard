@@ -176,7 +176,9 @@
 <script>
 const $ = id => document.getElementById(id);
 const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
-let D = null, RANGE = 60, BKEY = "b";
+let D = null, RANGE = 60, BKEY = "b", ZH = {};
+// 細項中文名稱：對照表沒有的就顯示英文（去掉 BEA 的註腳編號）
+const zh = n => ZH[n] || n.replace(/\s*\((?:part of )?\d+\)$/, "");
 
 const ymLabel = m => { const [y, mm] = m.split("-"); return `${y}/${+mm}`; };
 const ymShort = m => { const [y, mm] = m.split("-"); return `${y.slice(2)}/${+mm}`; };
@@ -186,7 +188,9 @@ async function load() {
   try {
     const r = await fetch(`data/pce_inflation.json?t=${Date.now()}`, { cache: "no-store" });
     if (!r.ok) throw 0;
-    D = await r.json(); render();
+    D = await r.json();
+    try { const z = await fetch(`data/pce_names_zh.json?t=${Date.now()}`, { cache: "no-store" }); if (z.ok) ZH = await z.json(); } catch {}
+    render();
   } catch { $("empty").hidden = false; $("content").hidden = true; }
 }
 
@@ -327,7 +331,7 @@ function drawDist() {
     const rect = svg.getBoundingClientRect(), cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
     const i = Math.max(0, Math.min(bins.length - 1, Math.floor((cx - P.l) / bw))), b = bins[i];
     const range = i === 0 ? `低於 ${b.b}%` : i === bins.length - 1 ? `${b.a}% 以上` : `${b.a}% ～ ${b.b}%`;
-    const ex = b.items.slice().sort((p, q) => q.w - p.w).slice(0, 3).map(d => `${d.name}（${d.yoy.toFixed(1)}%）`);
+    const ex = b.items.slice().sort((p, q) => q.w - p.w).slice(0, 3).map(d => `${esc(zh(d.name))}（${d.yoy.toFixed(1)}%）`);
     tip.innerHTML = `<b>${range}：${b.items.length} 項</b>` + (ex.length ? `<br>${ex.join("<br>")}` : "");
     tip.style.opacity = 1;
     const half = tip.offsetWidth / 2, x = P.l + (i + .5) * bw;
@@ -340,7 +344,7 @@ function drawDist() {
 
 function drawLists() {
   const items = D.dist.filter(d => d.yoy != null), mx = Math.max(...items.map(d => Math.abs(d.yoy)), 1);
-  const li = d => `<li><span class="nm" title="${esc(d.name)}">${esc(d.name)}</span>` +
+  const li = d => `<li><span class="nm" title="${esc(d.name)}">${esc(zh(d.name))}</span>` +
     `<span class="bar"><b style="width:${Math.abs(d.yoy) / mx * 100}%;background:${d.yoy > D.threshold ? css("--s1") : css("--dim")}"></b></span>` +
     `<span class="v">${d.yoy > 0 ? "+" : ""}${d.yoy.toFixed(1)}%</span></li>`;
   $("topList").innerHTML = items.slice(0, 8).map(li).join("");
