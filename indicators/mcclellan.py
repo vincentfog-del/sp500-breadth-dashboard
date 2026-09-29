@@ -229,6 +229,12 @@ def update_counts(cache: dict, key: str, uni: dict[str, str]) -> dict[str, pd.Da
 def main():
     now = dt.datetime.now(ZoneInfo("Asia/Taipei"))
     result = {"updated_tw": now.strftime("%Y-%m-%d %H:%M"), "markets": {}}
+    try:  # 記錄這次是否已用收盤資料算過，避免同一天重複跑
+        lt = json.loads((DATA / "latest.json").read_text(encoding="utf-8"))
+        if lt.get("status") == "closed":
+            result["closed_session"] = lt.get("session")
+    except Exception:
+        pass
 
     sp = mcclellan(sp500_counts())
     result["markets"]["sp500"] = {"name": "S&P 500", "universe": "S&P 500 成分股", "series": to_series(sp)}
