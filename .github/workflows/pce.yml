@@ -33,11 +33,8 @@ jobs:
       - run: python indicators/pce_inflation.py
         env:
           BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
-          PCE_DEBUG_DUMP: "1"     # 暫時：存原始資料到 debug/ 供除錯，修好後移除
       - name: Commit changed data
-        if: always()
         run: |
-          git add debug/ 2>/dev/null || true
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/

@@ -33,7 +33,6 @@ import os
 import re
 import sys
 import time
-from functools import lru_cache
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -112,50 +111,41 @@ def build_tree(lines, values):
     """
     lines：依表格順序的 (line, desc) 串列
     values：同順序的 2D 陣列（每列 = 一個項目在幾個檢查月份的名目金額）
-    回傳 root 節點 dict：{i, line, desc, sign, children}
+    回傳 (root, 用到的行數)；root 為 {i, line, desc, sign, children}
+
+    由最後一行往前算：第 i 行若能由緊接在後的幾個「子樹」加總（Less: 為減項）
+    剛好等於自己，就是父項；否則是最底層細項。子項可能是負值，所以不會提前放棄。
     """
     n = len(lines)
-    rel_tol = 0.0002   # 名目金額是可加總的，誤差只來自四捨五入，所以容忍度要很緊
-
-    def tol(b, k):
-        return max(rel_tol * abs(b), 0.5 * k + 1)
+    rel_tol = 0.0002   # 名目金額可加總，誤差只來自四捨五入
 
     def close(s, target, k):
-        return all(abs(a - b) <= tol(b, k) for a, b in zip(s, target))
+        return all(abs(a - b) <= max(rel_tol * abs(b), 0.5 * k + 1) for a, b in zip(s, target))
 
-    @lru_cache(maxsize=None)
-    def parse_node(i):
-        """試著把第 i 行當成有子項目的父項；不成立就是最底層細項。回傳 (node, 下一行索引)。"""
-        line, desc = lines[i]
-        node = {"i": i, "line": line, "desc": desc, "sign": -1 if is_less(desc) else 1, "children": []}
-        kids = parse_children(i + 1, tuple(values[i]))
-        if kids:
-            node["children"], nxt = kids
-            return node, nxt
-        return node, i + 1
+    sign = [-1 if is_less(d) else 1 for _, d in lines]
+    end = [0] * n            # end[i] = 第 i 行子樹結束後的下一行
+    kids = [[] for _ in range(n)]
+    for i in range(n - 1, -1, -1):
+        end[i] = i + 1
+        target = values[i]
+        s, j, k, ch = [0.0] * len(target), i + 1, 0, []
+        while j < n and k < 80:
+            s = [a + sign[j] * b for a, b in zip(s, values[j])]
+            ch.append(j); k += 1; j = end[j]
+            if close(s, target, k):
+                kids[i], end[i] = ch, j
+                break
 
-    def parse_children(j, target):
-        children, s, k = [], [0.0] * len(target), 0
-        while j < len(lines) and k < 80:
-            child, nxt = parse_node(j)
-            sign = child["sign"]
-            s = [a + sign * b for a, b in zip(s, values[j])]
-            children.append(child)
-            k += 1
-            j = nxt
-            if k >= 1 and close(s, target, k):
-                # 單一子項剛好等於父項時（例如只有一個子項），也接受
-                return children, j
-            # 已超過目標且下一行不是減項 → 不可能再湊回來
-            if j < n and not is_less(lines[j][1]) and any(b > 0 for b in target) and all(
-                    a > b + tol(b, k) for a, b in zip(s, target) if b > 0):
-                return None
-        return None
+    def node(i):
+        return {"i": i, "line": lines[i][0], "desc": lines[i][1], "sign": sign[i],
+                "children": [node(c) for c in kids[i]]}
 
-    root, nxt = parse_node(0)
+    import sys as _sys
+    _sys.setrecursionlimit(max(_sys.getrecursionlimit(), 4 * n + 100))
+    root = node(0)
     if not root["children"]:
         raise RuntimeError("無法從名目金額推出細項階層（第 1 行沒有可加總的子項）")
-    return root, nxt
+    return root, end[0]
 
 
 def leaves(node, path_sign=1, under_npish=False):
