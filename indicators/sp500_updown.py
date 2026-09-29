@@ -71,7 +71,7 @@ def market_context(now: datetime) -> dict[str, Any]:
     raise RuntimeError("Could not determine a recent NYSE session")
 
 
-def download_prices(tickers: list[str], attempts: int = 3) -> pd.DataFrame:
+def download_prices(tickers: list[str], period: str = "10d", attempts: int = 3) -> pd.DataFrame:
     """Download in chunks so a transient Yahoo failure does not lose the whole index."""
     frames: list[pd.DataFrame] = []
     for offset in range(0, len(tickers), 100):
@@ -81,7 +81,7 @@ def download_prices(tickers: list[str], attempts: int = 3) -> pd.DataFrame:
             try:
                 raw = yf.download(
                     chunk,
-                    period="10d",
+                    period=period,
                     interval="1d",
                     auto_adjust=False,
                     progress=False,
@@ -149,6 +149,29 @@ def upsert(records: list[dict[str, Any]], item: dict[str, Any], key: str) -> lis
     return sorted(records, key=lambda row: row.get(key, ""))
 
 
+def calculate_history(close: pd.DataFrame, cutoff: datetime) -> list[dict[str, Any]]:
+    """Build daily breadth from the current constituent universe for the last two years."""
+    changes = close.sort_index().pct_change(fill_method=None)
+    records: list[dict[str, Any]] = []
+    for idx, row in changes.iterrows():
+        session = pd.Timestamp(idx).date()
+        if session < cutoff.date():
+            continue
+        valid = row.dropna()
+        up = int((valid > 0.00000001).sum())
+        down = int((valid < -0.00000001).sum())
+        flat = int((valid.abs() <= 0.00000001).sum())
+        total = up + down + flat
+        if total < 450:
+            continue
+        records.append({"session": session.isoformat(), "status": "closed",
+            "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
+            "up": up, "down": down, "flat": flat, "missing": len(close.columns) - total,
+            "total": total, "up_pct": round(up / total * 100, 2),
+            "down_pct": round(down / total * 100, 2)})
+    return records
+
+
 def main() -> None:
     now = datetime.now(UTC)
     context = market_context(now)
@@ -167,6 +190,13 @@ def main() -> None:
     history = read_json(history_path, [])
     intraday = read_json(intraday_path, [])
 
+    cutoff = now - timedelta(days=731)
+    oldest = min((row.get("session", "9999-12-31") for row in history), default="9999-12-31")
+    if oldest > cutoff.date().isoformat():
+        print("Backfilling two years of daily breadth history...")
+        history = calculate_history(download_prices(tickers, period="2y"), cutoff)
+        atomic_json(history_path, history[-520:])
+
     if context["status"] == "intraday":
         minute_key = now.strftime("%Y-%m-%dT%H:%M")
         point["minute"] = minute_key
@@ -174,7 +204,7 @@ def main() -> None:
         intraday = upsert(intraday, point, "minute")[-40:]
         atomic_json(intraday_path, intraday)
     else:
-        history = upsert(history, point, "session")[-750:]
+        history = upsert(history, point, "session")[-520:]
         atomic_json(history_path, history)
         atomic_json(intraday_path, [])
 
