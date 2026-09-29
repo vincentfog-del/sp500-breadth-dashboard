@@ -126,7 +126,8 @@ VARIANTS = {
     "no_etf": {"common", "preferred", "warrant", "right", "unit"},
     "all": {"common", "preferred", "warrant", "right", "unit", "etf"},
 }
-PREFERRED = {"nyse": "no_etf", "nasdaq": "all"}   # Nasdaq 含 ETF 與 StockCharts $NASI 最接近（2026/9/28：−538 vs −517）
+# 與 StockCharts 比對（2026/9/28）：NYSE 普通股 −618 vs $NYSI −614；Nasdaq 含 ETF −536 vs $NASI −517
+PREFERRED = {"nyse": "common", "nasdaq": "all"}
 
 
 def universes() -> dict[str, dict[str, str]]:
@@ -249,7 +250,7 @@ def main():
             if len(df) <= WARMUP:
                 raise RuntimeError(f"{name} 歷史只有 {len(df)} 天，不足以暖機")
             m = mcclellan(df)
-            result["markets"][key] = {"name": name, "universe": f"{name} 上市證券" + ("（含 ETF）" if PREFERRED[key] == "all" else "（不含 ETF）"), "series": to_series(m)}
+            result["markets"][key] = {"name": name, "universe": {"common": f"{name} 上市普通股", "all": f"{name} 全部上市證券（含 ETF）"}.get(PREFERRED[key], f"{name} 上市證券"), "series": to_series(m)}
             # 各範圍比對：列出最近幾天的總和指標，方便和 StockCharts 對照
             cmp = []
             for v, vdf in variants.items():
