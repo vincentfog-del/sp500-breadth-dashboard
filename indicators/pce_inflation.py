@@ -254,12 +254,20 @@ def compute(price, nominal):
 def main():
     key = os.environ.get("BEA_API_KEY", "").strip()
     if not key:
+        gh("error", "缺少 BEA_API_KEY：請到 Settings → Secrets and variables → Actions 新增")
         sys.exit("缺少環境變數 BEA_API_KEY（到 https://apps.bea.gov/API/signup/ 免費申請）")
     years = list(range(FIRST_YEAR, dt.date.today().year + 1))
     print("下載 BEA 價格指數（U20404）...")
     price = fetch_table("U20404", years, key)
     print("下載 BEA 名目支出（U20405）...")
     nominal = fetch_table("U20405", years, key)
+    for name, df in (("U20404", price), ("U20405", nominal)):
+        per = sorted(df["period"].unique())
+        d = df.drop_duplicates("line").sort_values("line")
+        gh("notice", f"{name}: {len(df)} 筆, {d.shape[0]} 行, 期間 {per[0]}~{per[-1]}, "
+                     f"缺值 {int(df['value'].isna().sum())}; 前幾行: " +
+                     " | ".join(f"{r.line}:{r.desc[:40]}" for r in d.head(4).itertuples()) +
+                     " ... 末行: " + " | ".join(f"{r.line}:{r.desc[:40]}" for r in d.tail(3).itertuples()))
 
     res = compute(price, nominal)
     n = res["components"]
@@ -289,5 +297,21 @@ def main():
           f"疫情前平均 {res['baseline']['breadth']}%")
 
 
+def gh(kind, msg):
+    """在 GitHub Actions 裡輸出 annotation（Summary 頁面看得到，也能從 API 讀取）。"""
+    if os.environ.get("GITHUB_ACTIONS"):
+        msg = str(msg).replace("%", "%25").replace("\r", "").replace("\n", "%0A")
+        print(f"::{kind} title=PCE::{msg}", flush=True)
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except SystemExit:
+        raise
+    except Exception as e:
+        import traceback
+        tb = traceback.extract_tb(e.__traceback__)
+        where = " <- ".join(f"{Path(f.filename).name}:{f.lineno} {f.name}" for f in reversed(tb[-4:]))
+        gh("error", f"{type(e).__name__}: {e}\n位置：{where}")
+        raise
