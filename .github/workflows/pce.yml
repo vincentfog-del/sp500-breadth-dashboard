@@ -1,0 +1,39 @@
+name: 更新 PCE 通膨
+
+on:
+  schedule:
+    # BEA 在美東早上 8:30 公布。UTC 13:45 = 美東 9:45（夏令）/ 8:45（冬令），台灣 21:45
+    # 每個工作日檢查一次；沒有新資料就不會存檔
+    - cron: "45 13 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sp500-data-update     # 跟 S&P 500 那支共用，避免同時推送互相衝突
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python indicators/pce_inflation.py
+        env:
+          BEA_API_KEY: ${{ secrets.BEA_API_KEY }}
+      - name: Commit changed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/
+          if git diff --cached --quiet; then echo "資料沒有變化"; exit 0; fi
+          git commit -m "data: update PCE inflation"
+          git pull --rebase
+          git push

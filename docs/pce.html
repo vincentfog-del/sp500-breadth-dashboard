@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131417" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="PCE 通膨">
+<title>美國 PCE 通膨</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232a78d6'/><text x='16' y='22' font-size='15' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>%25</text></svg>">
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --ink: #1b1c1f; --muted: #6d6f76; --line: #e6e4df;
+    --grid: #ecebe7; --ref: #a9a8a3; --s1: #2a78d6; --s2: #eb6834; --dim: #d3d2cd;
+    --hot: #d9463b; --cool: #1f9d62;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #131417; --card: #1c1d21; --ink: #ecedef; --muted: #979aa2; --line: #2b2d33;
+      --grid: #26282d; --ref: #6c6e75; --s1: #3987e5; --s2: #d95926; --dim: #3a3c42;
+      --hot: #f0625a; --cool: #3fbf85;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #131417; --card: #1c1d21; --ink: #ecedef; --muted: #979aa2; --line: #2b2d33;
+    --grid: #26282d; --ref: #6c6e75; --s1: #3987e5; --s2: #d95926; --dim: #3a3c42;
+    --hot: #f0625a; --cool: #3fbf85;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-feature-settings: "tnum";
+  }
+  main { max-width: 760px; margin: 0 auto; padding: max(16px, env(safe-area-inset-top)) 16px 40px; }
+  nav { display: flex; gap: 6px; margin: 0 0 12px; }
+  nav a { font-size: 13px; color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); }
+  nav a[aria-current] { color: var(--ink); background: var(--card); font-weight: 600; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 12px; }
+  h1 { font-size: 17px; font-weight: 650; margin: 0; }
+  .sub { font-size: 12px; color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-bottom: 12px; }
+  .card h2 { font-size: 13px; font-weight: 600; color: var(--muted); margin: 0; letter-spacing: .02em; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; min-width: 0; }
+  .kpi .lab { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .kpi .val { font-size: 34px; font-weight: 700; line-height: 1.1; margin: 6px 0 4px; letter-spacing: -.02em; }
+  .kpi .val small { font-size: 16px; font-weight: 600; margin-left: 1px; }
+  .kpi .note { font-size: 12px; color: var(--muted); line-height: 1.45; }
+  .kpi .chg { font-weight: 600; }
+  .sw { width: 10px; height: 3px; border-radius: 2px; display: inline-block; }
+  @media (max-width: 520px) {
+    .kpis { grid-template-columns: 1fr 1fr; }
+    .kpi.wide { grid-column: 1 / -1; }
+  }
+
+  .tabs { display: inline-flex; background: var(--bg); border: 1px solid var(--line); border-radius: 9px; padding: 2px; }
+  .tabs button { border: 0; background: none; color: var(--muted); font: inherit; font-size: 13px; padding: 4px 10px; border-radius: 7px; cursor: pointer; }
+  .tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+
+  .chart { position: relative; margin-top: 10px; touch-action: pan-y; }
+  .chart svg { display: block; width: 100%; overflow: visible; }
+  .tip { position: absolute; top: 0; pointer-events: none; background: var(--ink); color: var(--card); font-size: 12px;
+    padding: 6px 9px; border-radius: 8px; white-space: nowrap; transform: translateX(-50%); opacity: 0; transition: opacity .1s; z-index: 2; line-height: 1.5; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 16px; height: 0; border-top: 2px solid; display: inline-block; }
+  .legend i.dash { border-top-style: dashed; }
+  .explain { font-size: 13px; color: var(--muted); margin: 6px 0 0; line-height: 1.6; }
+
+  .items { list-style: none; padding: 0; margin: 10px 0 0; }
+  .items li { display: grid; grid-template-columns: 1fr 64px 52px; align-items: center; gap: 10px; padding: 6px 0; border-top: 1px solid var(--grid); font-size: 13px; }
+  .items li:first-child { border-top: 0; }
+  .items .nm { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .items .bar { height: 6px; border-radius: 3px; background: var(--grid); overflow: hidden; }
+  .items .bar b { display: block; height: 100%; border-radius: 3px; }
+  .items .v { text-align: right; font-weight: 600; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 600px) { .cols { grid-template-columns: 1fr; gap: 6px; } }
+  .cols h3 { font-size: 12px; font-weight: 600; color: var(--muted); margin: 10px 0 0; }
+
+  footer { font-size: 12px; color: var(--muted); margin: 14px 2px 0; line-height: 1.7; }
+  .empty { text-align: center; padding: 36px 12px; color: var(--muted); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <nav>
+    <a href="index.html">S&amp;P 500 漲跌家數</a>
+    <a href="pce.html" aria-current="page">PCE 通膨</a>
+  </nav>
+  <header>
+    <h1>美國 PCE 通膨</h1>
+    <span class="sub" id="updated"></span>
+  </header>
+
+  <section class="card empty" id="empty" hidden>
+    還沒有資料。到 GitHub 的 Actions 頁面執行「更新 PCE 通膨」，約 2 分鐘後重新整理。
+  </section>
+
+  <div id="content" hidden>
+    <div class="kpis">
+      <div class="kpi">
+        <div class="lab"><span class="sw" style="background:var(--s1)"></span>PCE 年增率</div>
+        <div class="val" id="kPce"></div>
+        <div class="note" id="nPce"></div>
+      </div>
+      <div class="kpi">
+        <div class="lab"><span class="sw" style="background:var(--s2)"></span>核心 PCE</div>
+        <div class="val" id="kCore"></div>
+        <div class="note" id="nCore"></div>
+      </div>
+      <div class="kpi wide">
+        <div class="lab">細項漲幅 &gt; 3% 的比例</div>
+        <div class="val" id="kB"></div>
+        <div class="note" id="nB"></div>
+      </div>
+    </div>
+
+    <section class="card">
+      <div class="row">
+        <h2>PCE 與核心 PCE 年增率</h2>
+        <div class="tabs" data-for="infl">
+          <button data-n="24">2 年</button><button data-n="60" aria-pressed="true">5 年</button><button data-n="9999">全部</button>
+        </div>
+      </div>
+      <div class="chart" id="cInfl"><svg></svg><div class="tip"></div></div>
+      <div class="legend">
+        <span><i style="border-color:var(--s1)"></i>PCE</span>
+        <span><i style="border-color:var(--s2)"></i>核心 PCE</span>
+        <span><i class="dash" style="border-color:var(--ref)"></i>Fed 目標 2%</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>細項漲幅 &gt; 3% 的比例</h2>
+        <div class="tabs" data-for="breadth">
+          <button data-k="b" aria-pressed="true">依項目數</button><button data-k="bw">依金額加權</button>
+        </div>
+      </div>
+      <div class="chart" id="cB"><svg></svg><div class="tip"></div></div>
+      <div class="legend">
+        <span><i style="border-color:var(--s1)"></i><span id="bLegend">比例</span></span>
+        <span><i class="dash" style="border-color:var(--ref)"></i><span id="baseLegend">疫情前平均</span></span>
+      </div>
+      <p class="explain">Warsh 的看法：與其只看平均數，不如看「有多少東西在漲」。比例越高，代表通膨越普遍、越不是少數項目造成的。「依金額加權」則是把消費者花比較多錢的項目算得比較重。</p>
+    </section>
+
+    <section class="card">
+      <h2 id="distTitle">各細項年增率分布</h2>
+      <div class="chart" id="cDist"><svg></svg><div class="tip"></div></div>
+      <div class="legend">
+        <span><i style="border-color:var(--s1);border-top-width:8px;width:12px;border-radius:2px"></i>&gt; 3%</span>
+        <span><i style="border-color:var(--dim);border-top-width:8px;width:12px;border-radius:2px"></i>≤ 3%</span>
+      </div>
+      <div class="cols">
+        <div><h3>漲最多</h3><ul class="items" id="topList"></ul></div>
+        <div><h3>漲最少／下跌</h3><ul class="items" id="botList"></ul></div>
+      </div>
+    </section>
+  </div>
+
+  <footer id="foot">
+    年增率 = 與 12 個月前相比。細項為 BEA 表 2.4.4U 中最底層的消費項目（不含非營利機構的產出與銷售調整）。<br>
+    PCE 每月底前後公布上個月的數字，本頁在公布當天自動更新。<br>
+    <span id="source"></span>
+  </footer>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+let D = null, RANGE = 60, BKEY = "b";
+
+const ymLabel = m => { const [y, mm] = m.split("-"); return `${y}/${+mm}`; };
+const ymShort = m => { const [y, mm] = m.split("-"); return `${y.slice(2)}/${+mm}`; };
+const ymZh = m => { const [y, mm] = m.split("-"); return `${y} 年 ${+mm} 月`; };
+
+async function load() {
+  try {
+    const r = await fetch(`data/pce_inflation.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!r.ok) throw 0;
+    D = await r.json(); render();
+  } catch { $("empty").hidden = false; $("content").hidden = true; }
+}
+
+function chg(cur, prev, unit = " 個百分點") {
+  if (prev == null || cur == null) return "";
+  const d = cur - prev, arrow = d > 0.005 ? "▲" : d < -0.005 ? "▼" : "–";
+  const col = d > 0.005 ? "var(--hot)" : d < -0.005 ? "var(--cool)" : "var(--muted)";
+  return `<span class="chg" style="color:${col}">${arrow} ${Math.abs(d).toFixed(1)}</span>${unit}`;
+}
+
+function render() {
+  $("empty").hidden = true; $("content").hidden = false;
+  const S = D.series, L = S.at(-1), P = S.at(-2);
+  $("updated").textContent = `資料月份 ${ymLabel(D.latest_month)}`;
+  $("kPce").innerHTML = `${L.pce.toFixed(1)}<small>%</small>`;
+  $("nPce").innerHTML = `較上月 ${chg(L.pce, P?.pce)}<br>目標 2%，差 ${(L.pce - 2).toFixed(1)}`;
+  $("kCore").innerHTML = `${L.core.toFixed(1)}<small>%</small>`;
+  $("nCore").innerHTML = `較上月 ${chg(L.core, P?.core)}<br>排除食品與能源`;
+  $("kB").innerHTML = `${L.b.toFixed(0)}<small>%</small>`;
+  const base = D.baseline.breadth;
+  $("nB").innerHTML = `${L.n} 個細項中有 ${L.n_above} 個漲超過 3%` +
+    (base != null ? `<br>疫情前（${D.baseline.period}）平均 ${base.toFixed(0)}%` : "");
+  $("distTitle").textContent = `${ymZh(D.latest_month)}：各細項年增率分布`;
+  $("source").textContent = `資料：${D.source}。更新於 ${D.updated_tw || "—"}（台灣時間）。`;
+  drawInfl(); drawBreadth(); drawDist(); drawLists();
+}
+
+// ---------- 折線圖 ----------
+function niceDomain(vals, pad = 0.5, include = []) {
+  let lo = Math.min(...vals, ...include), hi = Math.max(...vals, ...include);
+  lo = Math.floor(lo - pad); hi = Math.ceil(hi + pad);
+  const span = hi - lo, step = span <= 6 ? 1 : span <= 12 ? 2 : span <= 30 ? 5 : 10;
+  return { lo: Math.floor(lo / step) * step, hi: Math.ceil(hi / step) * step, step };
+}
+
+function lineChart(box, rows, series, refs, dom, fmt) {
+  const svg = box.querySelector("svg"), tip = box.querySelector(".tip");
+  const W = box.clientWidth || 320, H = Math.round(Math.min(260, Math.max(180, W * 0.52)));
+  const P = { l: 34, r: 10, t: 12, b: 24 }, iw = W - P.l - P.r, ih = H - P.t - P.b, n = rows.length;
+  const X = i => P.l + (n === 1 ? iw / 2 : i / (n - 1) * iw);
+  const Y = v => P.t + (1 - (v - dom.lo) / (dom.hi - dom.lo)) * ih;
+  let s = "";
+  for (let g = dom.lo; g <= dom.hi + 1e-9; g += dom.step) {
+    s += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(g)}" y2="${Y(g)}" stroke="${css("--grid")}"/>`;
+    s += `<text x="${P.l - 6}" y="${Y(g) + 4}" text-anchor="end" font-size="11" fill="${css("--muted")}">${g}${fmt}</text>`;
+  }
+  for (const r of refs) s += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(r)}" y2="${Y(r)}" stroke="${css("--ref")}" stroke-width="1.5" stroke-dasharray="5 4"/>`;
+  const ticks = Math.min(n, W < 420 ? 4 : 6);
+  for (let k = 0; k < ticks; k++) {
+    const i = Math.round(k * (n - 1) / Math.max(1, ticks - 1));
+    const a = k === 0 ? "start" : k === ticks - 1 ? "end" : "middle";
+    s += `<text x="${X(i)}" y="${H - 5}" text-anchor="${a}" font-size="11" fill="${css("--muted")}">${ymShort(rows[i].m)}</text>`;
+  }
+  for (const se of series) {
+    let d = "", pen = false;
+    rows.forEach((r, i) => { const v = r[se.key]; if (v == null) { pen = false; return; }
+      d += `${pen ? "L" : "M"}${X(i).toFixed(1)},${Y(v).toFixed(1)}`; pen = true; });
+    s += `<path d="${d}" fill="none" stroke="${css(se.color)}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  }
+  const last = rows.at(-1);
+  for (const se of series) if (last[se.key] != null)
+    s += `<circle cx="${X(n - 1)}" cy="${Y(last[se.key])}" r="4" fill="${css(se.color)}" stroke="${css("--card")}" stroke-width="2"/>`;
+  s += `<g class="cur" visibility="hidden"><line y1="${P.t}" y2="${P.t + ih}" stroke="${css("--muted")}"/>` +
+       series.map(se => `<circle r="4.5" fill="${css("--card")}" stroke="${css(se.color)}" stroke-width="2"/>`).join("") + `</g>`;
+  s += `<rect x="${P.l}" y="0" width="${iw}" height="${H}" fill="transparent"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("height", H); svg.innerHTML = s;
+
+  const cur = svg.querySelector(".cur");
+  const show = e => {
+    const rect = svg.getBoundingClientRect(), cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const i = Math.max(0, Math.min(n - 1, Math.round((cx - P.l) / iw * (n - 1)))), r = rows[i], x = X(i);
+    cur.setAttribute("visibility", "visible");
+    cur.querySelector("line").setAttribute("x1", x); cur.querySelector("line").setAttribute("x2", x);
+    cur.querySelectorAll("circle").forEach((c, k) => {
+      const v = r[series[k].key]; c.setAttribute("cx", x); c.setAttribute("cy", v == null ? -99 : Y(v)); });
+    tip.innerHTML = `<b>${ymZh(r.m)}</b><br>` + series.map(se =>
+      `<span style="color:${css(se.color)}">●</span> ${se.name} ${r[se.key] == null ? "—" : r[se.key].toFixed(1) + fmt}` +
+      (se.extra ? se.extra(r) : "")).join("<br>");
+    tip.style.opacity = 1;
+    const half = tip.offsetWidth / 2; tip.style.left = `${Math.max(half, Math.min(W - half, x))}px`;
+    tip.style.top = `${-tip.offsetHeight - 6}px`;
+  };
+  const hide = () => { cur.setAttribute("visibility", "hidden"); tip.style.opacity = 0; };
+  svg.onpointermove = show; svg.onpointerdown = show; svg.onpointerleave = hide;
+  svg.ontouchmove = show; svg.ontouchend = () => setTimeout(hide, 1800);
+}
+
+function drawInfl() {
+  const rows = D.series.slice(-RANGE);
+  const vals = rows.flatMap(r => [r.pce, r.core]).filter(v => v != null);
+  lineChart($("cInfl"), rows, [
+    { key: "pce", color: "--s1", name: "PCE" },
+    { key: "core", color: "--s2", name: "核心 PCE" },
+  ], [2], niceDomain(vals, 0.3, [0, 2]), "%");
+}
+
+function drawBreadth() {
+  const rows = D.series, base = BKEY === "b" ? D.baseline.breadth : D.baseline.breadth_w;
+  $("bLegend").textContent = BKEY === "b" ? "依項目數" : "依金額加權";
+  $("baseLegend").textContent = base != null ? `疫情前平均 ${base.toFixed(0)}%` : "疫情前平均";
+  lineChart($("cB"), rows, [{ key: BKEY, color: "--s1", name: "漲超過 3% 的比例",
+    extra: r => BKEY === "b" ? `（${r.n_above}/${r.n}）` : "" }],
+    base != null ? [base] : [], { lo: 0, hi: 100, step: 25 }, "%");
+}
+
+// ---------- 分布直方圖 ----------
+function drawDist() {
+  const box = $("cDist"), svg = box.querySelector("svg"), tip = box.querySelector(".tip");
+  const items = D.dist.filter(d => d.yoy != null), th = D.threshold;
+  const LO = -4, HI = 10;                       // 區間 1 個百分點；兩端合併
+  const bins = [];
+  for (let a = LO; a < HI; a++) bins.push({ a, b: a + 1, items: [] });
+  items.forEach(d => { const k = Math.max(0, Math.min(bins.length - 1, Math.floor(d.yoy) - LO)); bins[k].items.push(d); });
+  const W = box.clientWidth || 320, H = 190, P = { l: 30, r: 6, t: 12, b: 26 }, iw = W - P.l - P.r, ih = H - P.t - P.b;
+  const max = Math.max(...bins.map(b => b.items.length), 1);
+  const step = max <= 10 ? 2 : max <= 25 ? 5 : 10, top = Math.ceil(max / step) * step;
+  const bw = iw / bins.length, Y = v => P.t + (1 - v / top) * ih;
+  let s = "";
+  for (let g = 0; g <= top; g += step) {
+    s += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(g)}" y2="${Y(g)}" stroke="${css("--grid")}"/>`;
+    s += `<text x="${P.l - 6}" y="${Y(g) + 4}" text-anchor="end" font-size="11" fill="${css("--muted")}">${g}</text>`;
+  }
+  bins.forEach((b, i) => {
+    const h = ih * b.items.length / top, x = P.l + i * bw + 1, y = P.t + ih - h, w = Math.max(1, bw - 2);
+    const col = b.a >= th ? css("--s1") : css("--dim");
+    if (h > 0) s += `<path d="M${x},${P.t + ih}V${y + Math.min(4, h)}q0,-${Math.min(4, h)} ${Math.min(4, w / 2)},-${Math.min(4, h)}H${x + w - Math.min(4, w / 2)}q${Math.min(4, w / 2)},0 ${Math.min(4, w / 2)},${Math.min(4, h)}V${P.t + ih}Z" fill="${col}"/>`;
+    const lab = i === 0 ? `≤${b.b}` : i === bins.length - 1 ? `≥${b.a}` : b.a;
+    if (i === 0 || i === bins.length - 1 || b.a % 2 === 0)
+      s += `<text x="${P.l + i * bw + (i === 0 ? bw : i === bins.length - 1 ? 0 : 0)}" y="${H - 8}" text-anchor="${i === 0 ? "end" : i === bins.length - 1 ? "start" : "middle"}" font-size="11" fill="${css("--muted")}">${lab}${i === bins.length - 1 ? "%" : ""}</text>`;
+  });
+  const tx = P.l + (th - LO) * bw;
+  s += `<line x1="${tx}" x2="${tx}" y1="${P.t - 4}" y2="${P.t + ih}" stroke="${css("--ink")}" stroke-width="1.5" stroke-dasharray="3 3"/>`;
+  s += `<text x="${tx + 5}" y="${P.t + 6}" font-size="11" fill="${css("--ink")}">3%</text>`;
+  s += `<rect x="${P.l}" y="0" width="${iw}" height="${H}" fill="transparent"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("height", H); svg.innerHTML = s;
+  const show = e => {
+    const rect = svg.getBoundingClientRect(), cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const i = Math.max(0, Math.min(bins.length - 1, Math.floor((cx - P.l) / bw))), b = bins[i];
+    const range = i === 0 ? `低於 ${b.b}%` : i === bins.length - 1 ? `${b.a}% 以上` : `${b.a}% ～ ${b.b}%`;
+    const ex = b.items.slice().sort((p, q) => q.w - p.w).slice(0, 3).map(d => `${d.name}（${d.yoy.toFixed(1)}%）`);
+    tip.innerHTML = `<b>${range}：${b.items.length} 項</b>` + (ex.length ? `<br>${ex.join("<br>")}` : "");
+    tip.style.opacity = 1;
+    const half = tip.offsetWidth / 2, x = P.l + (i + .5) * bw;
+    tip.style.left = `${Math.max(half, Math.min(W - half, x))}px`; tip.style.top = `${-tip.offsetHeight - 6}px`;
+  };
+  const hide = () => tip.style.opacity = 0;
+  svg.onpointermove = show; svg.onpointerdown = show; svg.onpointerleave = hide;
+  svg.ontouchmove = show; svg.ontouchend = () => setTimeout(hide, 2200);
+}
+
+function drawLists() {
+  const items = D.dist.filter(d => d.yoy != null), mx = Math.max(...items.map(d => Math.abs(d.yoy)), 1);
+  const li = d => `<li><span class="nm" title="${esc(d.name)}">${esc(d.name)}</span>` +
+    `<span class="bar"><b style="width:${Math.abs(d.yoy) / mx * 100}%;background:${d.yoy > D.threshold ? css("--s1") : css("--dim")}"></b></span>` +
+    `<span class="v">${d.yoy > 0 ? "+" : ""}${d.yoy.toFixed(1)}%</span></li>`;
+  $("topList").innerHTML = items.slice(0, 8).map(li).join("");
+  $("botList").innerHTML = items.slice(-8).reverse().map(li).join("");
+}
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+document.querySelectorAll(".tabs").forEach(t => t.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || !D) return;
+  t.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  if (t.dataset.for === "infl") { RANGE = +b.dataset.n; drawInfl(); }
+  else { BKEY = b.dataset.k; drawBreadth(); }
+}));
+let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => D && render(), 150); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => D && render());
+document.addEventListener("visibilitychange", () => { if (!document.hidden && D) load(); });
+load();
+</script>
+</body>
+</html>

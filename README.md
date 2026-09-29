@@ -35,3 +35,16 @@ python -m http.server 8000 --directory docs
 `上漲比例 = 上漲檔數 ÷ 有有效價格的成分股檔數 × 100%`
 
 資料不足 450 檔時程式會直接失敗，不會用殘缺資料覆蓋網頁。成分股名單來自 Wikipedia，價格來自 Yahoo Finance；本工具僅供資訊參考，不構成投資建議。
+
+## PCE 通膨頁（`docs/pce.html`）
+
+PCE、核心 PCE 年增率，以及 PCE 細項中年增率 > 3% 的比例（Fed 主席 Warsh 看的廣度指標）。資料來自 BEA，每個工作日台灣 21:45 檢查一次，BEA 公布新資料時自動更新。
+
+**需要一次性設定 BEA 金鑰：**
+1. **Settings → Secrets and variables → Actions → New repository secret**
+2. Name 填 `BEA_API_KEY`，Secret 貼上 BEA 金鑰 → **Add secret**
+3. **Actions → 更新 PCE 通膨 → Run workflow** 跑第一次
+
+金鑰不要寫進任何檔案（repo 是公開的）。執行紀錄最後會印出找到的細項數，正常約 200 個。
+
+細項認定：BEA 表 2.4.4U / 2.4.5U 最底層的消費項目（不含非營利機構產出與銷售調整）。BEA API 不提供表格階層，程式用「父項金額 = 子項加總」反推，推不出完整階層時直接報錯、不寫數字。
