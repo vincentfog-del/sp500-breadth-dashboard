@@ -1,0 +1,42 @@
+name: 更新 McClellan 廣度動能
+
+on:
+  schedule:
+    # 美股收盤後一次：UTC 22:15 = 台灣 06:15（夏令、冬令都已收盤）
+    - cron: "15 22 * * 1-5"
+  workflow_dispatch:
+  push:                          # 程式或排程設定有改動時立刻跑一次
+    branches: [main]
+    paths:
+      - indicators/mcclellan.py
+      - .github/workflows/mcclellan.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sp500-data-update       # 與其他更新共用，避免同時推送衝突
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45          # 第一次要抓約 6,000 檔股票 3 年的價格
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python indicators/mcclellan.py
+      - name: Commit changed data
+        if: always()             # 某個市場失敗時，其他市場的結果照樣存
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/
+          git diff --cached --quiet && exit 0
+          git commit -m "data: update McClellan breadth"
+          git pull --rebase
+          git push

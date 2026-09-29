@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131417" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="廣度動能">
+<title>McClellan 廣度動能</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23eb6834'/><path d='M5 20c4 0 5-10 9-10s4 12 8 12 4-8 5-8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/></svg>">
+<style>
+  :root {
+    --bg: #f6f5f2; --card: #ffffff; --ink: #1b1c1f; --muted: #6d6f76; --line: #e6e4df;
+    --grid: #ecebe7; --ref: #a9a8a3; --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+    --hot: #d9463b; --cool: #1f9d62; --warn-bg: #fff3d6; --warn-ink: #8a5a00; --ok-bg: #eceef3; --ok-ink: #474a52;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #131417; --card: #1c1d21; --ink: #ecedef; --muted: #979aa2; --line: #2b2d33;
+      --grid: #26282d; --ref: #6c6e75; --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+      --hot: #f0625a; --cool: #3fbf85; --warn-bg: #3b2f14; --warn-ink: #f2c35b; --ok-bg: #2a2c32; --ok-ink: #c3c5cb;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #131417; --card: #1c1d21; --ink: #ecedef; --muted: #979aa2; --line: #2b2d33;
+    --grid: #26282d; --ref: #6c6e75; --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --hot: #f0625a; --cool: #3fbf85; --warn-bg: #3b2f14; --warn-ink: #f2c35b; --ok-bg: #2a2c32; --ok-ink: #c3c5cb;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif; font-feature-settings: "tnum"; }
+  main { max-width: 760px; margin: 0 auto; padding: max(16px, env(safe-area-inset-top)) 16px 40px; }
+  nav { display: flex; gap: 6px; margin: 0 0 12px; flex-wrap: wrap; }
+  nav a { font-size: 13px; color: var(--muted); text-decoration: none; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); }
+  nav a[aria-current] { color: var(--ink); background: var(--card); font-weight: 600; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 2px 12px; }
+  h1 { font-size: 17px; font-weight: 650; margin: 0; }
+  .sub { font-size: 12px; color: var(--muted); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; margin-bottom: 12px; }
+  .card h2 { font-size: 13px; font-weight: 600; color: var(--muted); margin: 0; letter-spacing: .02em; }
+  .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
+  @media (max-width: 560px) { .kpis { grid-template-columns: 1fr; } }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px; min-width: 0; }
+  .kpi .lab { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+  .kpi .val { font-size: 32px; font-weight: 700; line-height: 1.1; margin: 6px 0 4px; letter-spacing: -.02em; }
+  .kpi .note { font-size: 12px; color: var(--muted); line-height: 1.55; }
+  .kpi .zone { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; margin-top: 4px; }
+  @media (max-width: 560px) {
+    .kpi { display: grid; grid-template-columns: 1fr auto; column-gap: 12px; align-items: center; }
+    .kpi .lab { grid-column: 1 / -1; }
+    .kpi .val { grid-row: 2 / 4; grid-column: 2; margin: 0; text-align: right; }
+  }
+  .sw { width: 12px; height: 3px; border-radius: 2px; display: inline-block; }
+
+  .tabs { display: inline-flex; background: var(--bg); border: 1px solid var(--line); border-radius: 9px; padding: 2px; }
+  .tabs button { border: 0; background: none; color: var(--muted); font: inherit; font-size: 13px; padding: 4px 10px; border-radius: 7px; cursor: pointer; }
+  .tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+
+  .chart { position: relative; margin-top: 10px; touch-action: pan-y; }
+  .chart svg { display: block; width: 100%; overflow: visible; }
+  .tip { position: absolute; top: 0; pointer-events: none; background: var(--ink); color: var(--card); font-size: 12px;
+    padding: 6px 9px; border-radius: 8px; white-space: nowrap; transform: translateX(-50%); opacity: 0; transition: opacity .1s; z-index: 2; line-height: 1.5; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { width: 16px; height: 0; border-top: 2px solid; display: inline-block; }
+  .legend i.dash { border-top-style: dashed; }
+  .explain { font-size: 13px; color: var(--muted); margin: 8px 0 0; line-height: 1.7; }
+  .explain b { color: var(--ink); font-weight: 600; }
+  .formula { font: 12.5px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: var(--bg); border-radius: 10px; padding: 10px 12px; margin: 10px 0 0; color: var(--ink); white-space: pre-wrap; }
+  footer { font-size: 12px; color: var(--muted); margin: 14px 2px 0; line-height: 1.7; }
+  .empty { text-align: center; padding: 36px 12px; color: var(--muted); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <nav>
+    <a href="index.html">S&amp;P 500 漲跌家數</a>
+    <a href="mcclellan.html" aria-current="page">廣度動能</a>
+    <a href="pce.html">PCE 通膨</a>
+  </nav>
+  <header>
+    <h1>McClellan 廣度動能</h1>
+    <span class="sub" id="updated"></span>
+  </header>
+
+  <section class="card empty" id="empty" hidden>還沒有資料。到 GitHub 的 Actions 頁面執行「更新 McClellan 廣度動能」，約 5～10 分鐘後重新整理。</section>
+
+  <div id="content" hidden>
+    <div class="kpis" id="kpis"></div>
+
+    <section class="card">
+      <div class="row">
+        <h2>總和指標（Summation Index）</h2>
+        <div class="tabs" data-for="range">
+          <button data-n="130">6 月</button><button data-n="260" aria-pressed="true">1 年</button><button data-n="9999">全部</button>
+        </div>
+      </div>
+      <div class="chart" id="cSum"><svg></svg><div class="tip"></div></div>
+      <div class="legend" id="sumLegend"></div>
+      <p class="explain">越往下代表廣度的弱勢累積得越久、越嚴重。<b>跌破 −500</b> 通常屬於超賣區，<b>接近 −1000</b> 是少見的極端（例如 2025 年 4 月）。線條<b>由下往上轉折</b>時，代表短期廣度開始比長期好轉。</p>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <h2>震盪指標（Oscillator）</h2>
+        <div class="tabs" data-for="mkt" id="mktTabs"></div>
+      </div>
+      <div class="chart" id="cOsc"><svg></svg><div class="tip"></div></div>
+      <p class="explain">震盪指標 = 短期廣度（約 19 日）減長期廣度（約 39 日）。<b>大於 0</b>（紅柱）時總和指標往上走，<b>小於 0</b>（綠柱）時往下走。由負翻正常被視為廣度轉強的訊號。</p>
+    </section>
+
+    <section class="card">
+      <h2>怎麼算的</h2>
+      <div class="formula">每日淨上漲比 = (上漲家數 − 下跌家數) ÷ (上漲 + 下跌) × 1000
+震盪指標     = 淨上漲比的 10% 指數平均 − 5% 指數平均
+總和指標     = 震盪指標逐日累加</div>
+      <p class="explain">跟「漲跌家數」頁的差別：那頁看的是<b>單日</b>有多少股票上漲；這頁把每天的漲跌比例經過平滑、再累加，看的是<b>廣度的中期趨勢</b>，比較不會被單日雜訊干擾。</p>
+      <p class="explain" id="diffNote">NYSE、Nasdaq 為本站自行計算（上市普通股與特別股，不含 ETF），StockCharts 的 $NYSI、$NASI 採用交易所官方的全部掛牌證券，數值會有差異但走勢相近。歷史回補只包含目前仍上市的股票，較早期的數值會略偏多頭。</p>
+    </section>
+  </div>
+
+  <footer>資料每個交易日美股收盤後更新（台灣約早上 6:15）。資料來源：S&amp;P 500 成分股、Nasdaq Trader 上市清單、Yahoo Finance 收盤價。<br><span id="source"></span></footer>
+</main>
+
+<script>
+const $ = id => document.getElementById(id);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const MK = [
+  { key: "sp500", name: "S&P 500", color: "--s1" },
+  { key: "nyse", name: "NYSE", color: "--s2" },
+  { key: "nasdaq", name: "Nasdaq", color: "--s3" },
+];
+let D = null, RANGE = 260, SEL = "sp500";
+const md = d => { const [y, m, dd] = d.split("-"); return `${+m}/${+dd}`; };
+const ymd = d => { const [y, m, dd] = d.split("-"); return `${y}/${+m}/${+dd}`; };
+const tickLab = d => { const [y, m] = d.split("-"); return `${y.slice(2)}/${+m}`; };
+const fmt = v => (v > 0 ? "+" : "") + v.toFixed(0);
+
+async function load() {
+  try {
+    const r = await fetch(`data/mcclellan.json?t=${Date.now()}`, { cache: "no-store" });
+    if (!r.ok) throw 0;
+    D = await r.json(); render();
+  } catch { $("empty").hidden = false; $("content").hidden = true; }
+}
+
+function zone(v) {
+  if (v <= -1000) return ["極端超賣", "var(--cool)"];
+  if (v <= -500) return ["超賣區", "var(--cool)"];
+  if (v >= 1000) return ["極端強勢", "var(--hot)"];
+  if (v >= 500) return ["強勢區", "var(--hot)"];
+  return ["中性區", "var(--muted)"];
+}
+
+function render() {
+  $("empty").hidden = true; $("content").hidden = false;
+  const avail = MK.filter(m => D.markets[m.key]?.series?.length);
+  $("updated").textContent = `更新 ${D.updated_tw.slice(5).replace("-", "/")}`;
+  $("kpis").innerHTML = avail.map(m => {
+    const S = D.markets[m.key].series, L = S.at(-1), P = S.at(-2);
+    const [zt, zc] = zone(L.sum), rising = L.osc > 0;
+    const turn = P && (P.osc <= 0) !== (L.osc <= 0) ? (rising ? "（剛翻正）" : "（剛翻負）") : "";
+    return `<div class="kpi">
+      <div class="lab"><span class="sw" style="background:var(${m.color})"></span>${m.name}　<span>${md(L.d)}</span></div>
+      <div class="val">${fmt(L.sum)}</div>
+      <div class="note">震盪 ${fmt(L.osc)}，<span style="color:${rising ? "var(--hot)" : "var(--cool)"};font-weight:600">${rising ? "▲ 上升中" : "▼ 下降中"}</span>${turn}</div>
+      <div class="note">當日 漲 ${L.up}／跌 ${L.down}　<span class="zone" style="color:${zc};border:1px solid ${zc}">${zt}</span></div>
+    </div>`;
+  }).join("");
+  $("sumLegend").innerHTML = avail.map(m => `<span><i style="border-color:var(${m.color})"></i>${m.name}</span>`).join("") +
+    `<span><i class="dash" style="border-color:var(--ref)"></i>±500</span>`;
+  $("mktTabs").innerHTML = avail.map(m => `<button data-k="${m.key}" aria-pressed="${m.key === SEL}">${m.name}</button>`).join("");
+  if (!avail.some(m => m.key === SEL)) SEL = avail[0].key;
+  $("source").textContent = "";
+  drawSum(); drawOsc();
+}
+
+// ---------- 總和指標：三條線同一個刻度 ----------
+function drawSum() {
+  const avail = MK.filter(m => D.markets[m.key]?.series?.length);
+  const maps = Object.fromEntries(avail.map(m => [m.key, new Map(D.markets[m.key].series.map(p => [p.d, p.sum]))]));
+  const dates = [...new Set(avail.flatMap(m => D.markets[m.key].series.map(p => p.d)))].sort().slice(-RANGE);
+  const rows = dates.map(d => ({ d, ...Object.fromEntries(avail.map(m => [m.key, maps[m.key].get(d) ?? null])) }));
+  const vals = rows.flatMap(r => avail.map(m => r[m.key])).filter(v => v != null);
+  let lo = Math.min(...vals, -600), hi = Math.max(...vals, 600);
+  const step = hi - lo > 1600 ? 500 : 250; lo = Math.floor(lo / step) * step; hi = Math.ceil(hi / step) * step;
+  lineChart($("cSum"), rows, avail.map(m => ({ key: m.key, color: m.color, name: m.name })), [-500, 500], { lo, hi, step }, 0);
+}
+
+function lineChart(box, rows, series, refs, dom, zeroLine) {
+  const svg = box.querySelector("svg"), tip = box.querySelector(".tip");
+  const W = box.clientWidth || 320, H = Math.round(Math.min(280, Math.max(200, W * 0.56)));
+  const P = { l: 44, r: 10, t: 12, b: 24 }, iw = W - P.l - P.r, ih = H - P.t - P.b, n = rows.length;
+  const X = i => P.l + (n === 1 ? iw / 2 : i / (n - 1) * iw);
+  const Y = v => P.t + (1 - (v - dom.lo) / (dom.hi - dom.lo)) * ih;
+  let s = "";
+  for (let g = dom.lo; g <= dom.hi + 1e-9; g += dom.step) {
+    s += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(g)}" y2="${Y(g)}" stroke="${css(g === 0 ? "--ref" : "--grid")}" stroke-width="${g === 0 ? 1.2 : 1}"/>`;
+    s += `<text x="${P.l - 6}" y="${Y(g) + 4}" text-anchor="end" font-size="11" fill="${css("--muted")}">${g}</text>`;
+  }
+  for (const r of refs) if (r > dom.lo && r < dom.hi)
+    s += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(r)}" y2="${Y(r)}" stroke="${css("--ref")}" stroke-width="1.2" stroke-dasharray="5 4"/>`;
+  const ticks = Math.min(n, W < 420 ? 4 : 6);
+  for (let k = 0; k < ticks; k++) {
+    const i = Math.round(k * (n - 1) / Math.max(1, ticks - 1)), a = k === 0 ? "start" : k === ticks - 1 ? "end" : "middle";
+    s += `<text x="${X(i)}" y="${H - 5}" text-anchor="${a}" font-size="11" fill="${css("--muted")}">${tickLab(rows[i].d)}</text>`;
+  }
+  for (const se of series) {
+    let d = "", pen = false;
+    rows.forEach((r, i) => { const v = r[se.key]; if (v == null) { pen = false; return; }
+      d += `${pen ? "L" : "M"}${X(i).toFixed(1)},${Y(v).toFixed(1)}`; pen = true; });
+    s += `<path d="${d}" fill="none" stroke="${css(se.color)}" stroke-width="2" stroke-linejoin="round"/>`;
+  }
+  for (const se of series) { const i = rows.map(r => r[se.key]).findLastIndex(v => v != null);
+    if (i >= 0) s += `<circle cx="${X(i)}" cy="${Y(rows[i][se.key])}" r="4" fill="${css(se.color)}" stroke="${css("--card")}" stroke-width="2"/>`; }
+  s += `<g class="cur" visibility="hidden"><line y1="${P.t}" y2="${P.t + ih}" stroke="${css("--muted")}"/>` +
+    series.map(se => `<circle r="4.5" fill="${css("--card")}" stroke="${css(se.color)}" stroke-width="2"/>`).join("") + `</g>`;
+  s += `<rect x="${P.l}" y="0" width="${iw}" height="${H}" fill="transparent"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("height", H); svg.innerHTML = s;
+  const cur = svg.querySelector(".cur");
+  const show = e => {
+    const rect = svg.getBoundingClientRect(), cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const i = Math.max(0, Math.min(n - 1, Math.round((cx - P.l) / iw * (n - 1)))), r = rows[i], x = X(i);
+    cur.setAttribute("visibility", "visible");
+    cur.querySelector("line").setAttribute("x1", x); cur.querySelector("line").setAttribute("x2", x);
+    cur.querySelectorAll("circle").forEach((c, k) => { const v = r[series[k].key]; c.setAttribute("cx", x); c.setAttribute("cy", v == null ? -99 : Y(v)); });
+    tip.innerHTML = `<b>${ymd(r.d)}</b><br>` + series.map(se =>
+      `<span style="color:${css(se.color)}">●</span> ${se.name} ${r[se.key] == null ? "—" : fmt(r[se.key])}`).join("<br>");
+    tip.style.opacity = 1; const half = tip.offsetWidth / 2;
+    tip.style.left = `${Math.max(half, Math.min(W - half, x))}px`; tip.style.top = `${-tip.offsetHeight - 6}px`;
+  };
+  const hide = () => { cur.setAttribute("visibility", "hidden"); tip.style.opacity = 0; };
+  svg.onpointermove = show; svg.onpointerdown = show; svg.onpointerleave = hide;
+  svg.ontouchmove = show; svg.ontouchend = () => setTimeout(hide, 1800);
+}
+
+// ---------- 震盪指標：柱狀圖 ----------
+function drawOsc() {
+  const box = $("cOsc"), svg = box.querySelector("svg"), tip = box.querySelector(".tip");
+  const rows = D.markets[SEL].series.slice(-RANGE), n = rows.length;
+  const W = box.clientWidth || 320, H = 190, P = { l: 44, r: 10, t: 10, b: 24 }, iw = W - P.l - P.r, ih = H - P.t - P.b;
+  const m = Math.max(...rows.map(r => Math.abs(r.osc)), 50), step = m > 200 ? 100 : 50, top = Math.ceil(m / step) * step;
+  const Y = v => P.t + (1 - (v + top) / (2 * top)) * ih, bw = iw / n;
+  let s = "";
+  for (let g = -top; g <= top; g += step) {
+    s += `<line x1="${P.l}" x2="${W - P.r}" y1="${Y(g)}" y2="${Y(g)}" stroke="${css(g === 0 ? "--ref" : "--grid")}"/>`;
+    s += `<text x="${P.l - 6}" y="${Y(g) + 4}" text-anchor="end" font-size="11" fill="${css("--muted")}">${g}</text>`;
+  }
+  const hot = css("--hot"), cool = css("--cool");
+  rows.forEach((r, i) => {
+    const y0 = Y(0), y1 = Y(r.osc), x = P.l + i * bw, w = Math.max(1, bw - (bw > 3 ? 1 : 0));
+    s += `<rect x="${x.toFixed(1)}" y="${Math.min(y0, y1).toFixed(1)}" width="${w.toFixed(2)}" height="${Math.max(.5, Math.abs(y1 - y0)).toFixed(1)}" fill="${r.osc >= 0 ? hot : cool}"/>`;
+  });
+  const ticks = Math.min(n, W < 420 ? 4 : 6);
+  for (let k = 0; k < ticks; k++) {
+    const i = Math.round(k * (n - 1) / Math.max(1, ticks - 1)), a = k === 0 ? "start" : k === ticks - 1 ? "end" : "middle";
+    s += `<text x="${P.l + (i + .5) * bw}" y="${H - 5}" text-anchor="${a}" font-size="11" fill="${css("--muted")}">${tickLab(rows[i].d)}</text>`;
+  }
+  s += `<line class="cur" y1="${P.t}" y2="${P.t + ih}" stroke="${css("--muted")}" visibility="hidden"/>`;
+  s += `<rect x="${P.l}" y="0" width="${iw}" height="${H}" fill="transparent"/>`;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("height", H); svg.innerHTML = s;
+  const cur = svg.querySelector(".cur");
+  const show = e => {
+    const rect = svg.getBoundingClientRect(), cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+    const i = Math.max(0, Math.min(n - 1, Math.floor((cx - P.l) / bw))), r = rows[i], x = P.l + (i + .5) * bw;
+    cur.setAttribute("x1", x); cur.setAttribute("x2", x); cur.setAttribute("visibility", "visible");
+    tip.innerHTML = `<b>${ymd(r.d)}</b><br>震盪 ${fmt(r.osc)}　總和 ${fmt(r.sum)}<br>漲 ${r.up}／跌 ${r.down}（淨上漲比 ${fmt(r.rana)}）`;
+    tip.style.opacity = 1; const half = tip.offsetWidth / 2;
+    tip.style.left = `${Math.max(half, Math.min(W - half, x))}px`; tip.style.top = `${-tip.offsetHeight - 6}px`;
+  };
+  const hide = () => { cur.setAttribute("visibility", "hidden"); tip.style.opacity = 0; };
+  svg.onpointermove = show; svg.onpointerdown = show; svg.onpointerleave = hide;
+  svg.ontouchmove = show; svg.ontouchend = () => setTimeout(hide, 1800);
+}
+
+document.addEventListener("click", e => {
+  const b = e.target.closest(".tabs button"); if (!b || !D) return;
+  const t = b.closest(".tabs");
+  t.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  if (t.dataset.for === "range") { RANGE = +b.dataset.n; drawSum(); drawOsc(); }
+  else { SEL = b.dataset.k; drawOsc(); }
+});
+let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => D && render(), 150); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => D && render());
+document.addEventListener("visibilitychange", () => { if (!document.hidden && D) load(); });
+load();
+</script>
+</body>
+</html>
