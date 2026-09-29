@@ -53,3 +53,17 @@ async function load(){
 document.querySelectorAll('.ranges button').forEach(b=>b.addEventListener('click',()=>setRange(+b.dataset.days)));
 $('chart').addEventListener('pointermove',inspectChart);$('chart').addEventListener('pointerdown',inspectChart);$('chart').addEventListener('pointerleave',()=>{$('tooltip').hidden=true;hoverIndex=-1;draw(shownPoints)});
 addEventListener('resize',()=>draw(shownPoints,hoverIndex));load();
+
+// 重新整理：重新讀取最新的資料檔（不用重開頁面）
+$('refreshBtn').addEventListener('click',async()=>{
+  const btn=$('refreshBtn'), txt=$('refreshTxt');
+  btn.disabled=true;btn.classList.add('spin');txt.textContent='更新中…';
+  try{await load();const t=new Intl.DateTimeFormat('zh-TW',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Taipei'}).format(new Date());txt.textContent=`已更新 ${t}`}
+  catch(e){txt.textContent='更新失敗，再試一次'}
+  finally{btn.disabled=false;btn.classList.remove('spin');setTimeout(()=>txt.textContent='重新整理',4000)}
+});
+// 重新計算：連到 GitHub Actions 的手動執行頁（在 <帳號>.github.io/<repo>/ 上自動帶入）
+(()=>{const m=location.hostname.match(/^([^.]+)\.github\.io$/), repo=location.pathname.split('/').filter(Boolean)[0];
+  if(m&&repo){$('runLink').href=`https://github.com/${m[1]}/${repo}/actions/workflows/update.yml`;$('runLink').hidden=false;$('refreshNote').hidden=false}})();
+// 回到這個分頁時自動重抓一次
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)load()});

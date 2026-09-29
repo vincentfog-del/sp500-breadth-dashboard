@@ -17,6 +17,11 @@
       <div class="bar"><i id="upBar"></i></div>
       <div class="counts"><span class="up">▲ <b id="up">—</b> 上漲</span><span class="flat">— <b id="flat">—</b> 平盤</span><span class="down">▼ <b id="down">—</b> 下跌</span></div>
     </section>
+    <div class="actions">
+      <button id="refreshBtn" type="button"><span class="ico" aria-hidden="true">↻</span><span id="refreshTxt">重新整理</span></button>
+      <a id="runLink" target="_blank" rel="noopener" hidden>重新計算最新數據 ↗</a>
+    </div>
+    <p id="refreshNote" class="refresh-note" hidden>「重新計算」會到 GitHub 執行一次更新（需登入），約 2 分鐘算完；之後回來按「重新整理」就會看到新數字。</p>
     <section class="card chart-card">
       <div class="section-title"><div><h2 id="chartTitle">過去兩年收盤走勢</h2><p>每日 S&amp;P 500 成分股上漲比例</p></div><span>0–100%</span></div>
       <div class="ranges" role="group" aria-label="線圖期間"><button data-days="31">1月</button><button data-days="93">3月</button><button data-days="186">6月</button><button data-days="366">1年</button><button class="active" data-days="731">2年</button></div>
