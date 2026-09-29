@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b1020">
+  <title>S&P 500 漲跌家數</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header><div><p class="eyebrow">MARKET BREADTH</p><h1>S&P 500 漲跌家數</h1></div><span id="badge">讀取中</span></header>
+    <section class="hero card">
+      <p id="session">—</p>
+      <div class="score"><strong id="upPct">—</strong><span>上漲比例</span></div>
+      <div class="bar"><i id="upBar"></i></div>
+      <div class="counts"><span class="up">▲ <b id="up">—</b> 上漲</span><span class="flat">— <b id="flat">—</b> 平盤</span><span class="down">▼ <b id="down">—</b> 下跌</span></div>
+    </section>
+    <section class="card"><div class="section-title"><h2 id="chartTitle">近期走勢</h2><span>0–100%</span></div><canvas id="chart" height="230"></canvas></section>
+    <p id="updated" class="updated">等待資料…</p>
+    <p class="note">盤中數值以當下最新價相對前一交易日收盤計算，屬暫定資料；收盤後會更新為正式值。</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
