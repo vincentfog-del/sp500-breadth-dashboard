@@ -96,22 +96,54 @@ def read_symdir(name: str) -> pd.DataFrame:
 
 
 def yahoo_symbol(sym: str) -> str | None:
+    """Nasdaq Trader 的 ACT 代號 → Yahoo 代號。特別股 ABR$D → ABR-PD、權證 X.WS → X-WT、B 股 BRK.B → BRK-B。"""
     s = sym.strip().upper()
-    if not s or any(c in s for c in "$^=~ "):
+    if not s or any(c in s for c in "^=~# "):
         return None
-    s = s.replace(".PR", "-P").replace(".WS", "-WT").replace(".", "-")
+    s = s.replace("$", "-P").replace(".WS", "-WT").replace(".U", "-U").replace(".", "-")
     return s
 
 
-def universes() -> dict[str, list[str]]:
+def classify(name: str, act: str, etf: str) -> str:
+    n = name.lower()
+    if etf == "Y":
+        return "etf"
+    if "warrant" in n:
+        return "warrant"
+    if " right" in n:
+        return "right"
+    if " unit" in n:
+        return "unit"
+    if "$" in act or "preferred" in n or "depositary share" in n:
+        return "preferred"
+    return "common"
+
+
+# 要比對的幾種範圍（哪些證券算進漲跌家數）；PREFERRED 為頁面採用的版本
+VARIANTS = {
+    "common": {"common"},
+    "common_pref": {"common", "preferred"},
+    "no_etf": {"common", "preferred", "warrant", "right", "unit"},
+    "all": {"common", "preferred", "warrant", "right", "unit", "etf"},
+}
+PREFERRED = {"nyse": "no_etf", "nasdaq": "no_etf"}
+
+
+def universes() -> dict[str, dict[str, str]]:
+    """回傳 {市場: {yahoo 代號: 類別}}。"""
     nq = read_symdir("nasdaqlisted")
-    nq = nq[(nq["Test Issue"] == "N") & (nq["ETF"] == "N")]
+    nq = nq[nq["Test Issue"] == "N"]
     ot = read_symdir("otherlisted")
-    ot = ot[(ot["Exchange"] == "N") & (ot["Test Issue"] == "N") & (ot["ETF"] == "N")]
-    out = {
-        "nasdaq": sorted({y for y in map(yahoo_symbol, nq["Symbol"]) if y}),
-        "nyse": sorted({y for y in map(yahoo_symbol, ot["CQS Symbol"]) if y}),
-    }
+    ot = ot[(ot["Exchange"] == "N") & (ot["Test Issue"] == "N")]
+    out = {"nasdaq": {}, "nyse": {}}
+    for r in nq.itertuples():
+        y = yahoo_symbol(r.Symbol)
+        if y:
+            out["nasdaq"][y] = classify(r._2, r.Symbol, r.ETF)
+    for r in ot.itertuples():
+        y = yahoo_symbol(r._1)
+        if y:
+            out["nyse"][y] = classify(r._2, r._1, r.ETF)
     return out
 
 
@@ -152,23 +184,35 @@ def count_updown(close: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def update_counts(cache: dict, key: str, tickers: list[str]) -> pd.DataFrame:
-    have = cache.get(key, {})
-    period = "1mo" if len(have) >= 300 else "3y"
+def update_counts(cache: dict, key: str, uni: dict[str, str]) -> dict[str, pd.DataFrame]:
+    """下載一次價格，同時算出各種範圍的每日漲跌家數；回傳 {範圍: DataFrame}。"""
+    mk = cache.setdefault(key, {})
+    if mk and not isinstance(next(iter(mk.values())), dict) or any(v not in mk for v in VARIANTS):
+        mk.clear()                               # 舊格式或缺範圍 → 重抓完整歷史
+    have_days = min((len(mk.get(v, {})) for v in VARIANTS), default=0)
+    period = "1mo" if have_days >= 300 else "3y"
+    tickers = sorted(uni)
     print(f"{key}: {len(tickers)} 檔，下載 {period} ...")
     close = download(tickers, period)
-    got = int(close.notna().any().sum())
-    gh("notice", f"{key}: 清單 {len(tickers)} 檔，抓到價格 {got} 檔，期間 {period}")
-    if got < len(tickers) * 0.6:
-        raise RuntimeError(f"{key} 只抓到 {got}/{len(tickers)} 檔價格，太少，這次不更新")
-    new = count_updown(close)
-    # 最近一天若是盤中（收盤前執行），不寫入
-    new = new.iloc[1:]  # 第一天沒有前一日可比
-    for d, x in new.iterrows():
-        have[d] = [int(x.up), int(x.down), int(x.flat), int(x.n)]
-    cache[key] = dict(sorted(have.items()))
-    df = pd.DataFrame.from_dict(cache[key], orient="index", columns=["up", "down", "flat", "n"])
-    return df.sort_index()
+    ok = set(close.columns[close.notna().any()])
+    by_cat = {}
+    for t, c in uni.items():
+        by_cat.setdefault(c, [0, 0]); by_cat[c][0] += 1; by_cat[c][1] += t in ok
+    gh("notice", f"{key}: 期間 {period}；各類 清單/抓到：" + "，".join(f"{c} {n}/{g}" for c, (n, g) in sorted(by_cat.items())))
+    common_n, common_ok = by_cat.get("common", [0, 0])
+    if common_ok < common_n * 0.6:
+        miss = [t for t, c in uni.items() if c == "common" and t not in ok][:12]
+        raise RuntimeError(f"{key} 普通股只抓到 {common_ok}/{common_n} 檔，這次不更新；例如缺 {miss}")
+    out = {}
+    for v, cats in VARIANTS.items():
+        cols = [t for t, c in uni.items() if c in cats and t in ok]
+        new = count_updown(close[cols]).iloc[1:]     # 第一天沒有前一日可比
+        have = mk.setdefault(v, {})
+        for d, x in new.iterrows():
+            have[d] = [int(x.up), int(x.down), int(x.flat), int(x.n)]
+        mk[v] = dict(sorted(have.items()))
+        out[v] = pd.DataFrame.from_dict(mk[v], orient="index", columns=["up", "down", "flat", "n"]).sort_index()
+    return out
 
 
 def main():
@@ -186,17 +230,22 @@ def main():
         gh("warning", f"上市清單下載失敗，NYSE/Nasdaq 這次沿用舊資料：{e}")
     for key, name in (("nyse", "NYSE"), ("nasdaq", "Nasdaq")):
         try:
-            df = update_counts(cache, key, uni[key]) if uni else \
-                pd.DataFrame.from_dict(cache.get(key, {}), orient="index", columns=["up", "down", "flat", "n"]).sort_index()
+            if uni:
+                variants = update_counts(cache, key, uni[key])
+            else:
+                variants = {v: pd.DataFrame.from_dict(d, orient="index", columns=["up", "down", "flat", "n"]).sort_index()
+                            for v, d in cache.get(key, {}).items() if isinstance(d, dict)}
+            df = variants[PREFERRED[key]]
             if len(df) <= WARMUP:
                 raise RuntimeError(f"{name} 歷史只有 {len(df)} 天，不足以暖機")
             m = mcclellan(df)
-            result["markets"][key] = {"name": name, "universe": f"{name} 上市股票（不含 ETF）",
-                                      "series": to_series(m)}
-            last = m.iloc[-1]
-            gh("notice", f"{name} {m.index[-1]}: 漲 {int(last.up)} 跌 {int(last.down)} "
-                         f"RANA {last.rana:.1f} Osc {last.osc:.1f} Sum {last['sum']:.2f}；"
-                         + "；".join(f"{d}: {m.loc[d, 'sum']:.2f}" for d in m.index[-4:-1]))
+            result["markets"][key] = {"name": name, "universe": f"{name} 上市證券（不含 ETF）", "series": to_series(m)}
+            # 各範圍比對：列出最近幾天的總和指標，方便和 StockCharts 對照
+            cmp = []
+            for v, vdf in variants.items():
+                mm = mcclellan(vdf)
+                cmp.append(f"{v}: " + " ".join(f"{d[5:]}={mm.loc[d, 'sum']:.0f}" for d in mm.index[-3:]))
+            gh("notice", f"{name} 總和指標（各範圍）｜" + "｜".join(cmp))
         except Exception as e:
             gh("error", f"{name} 失敗：{type(e).__name__}: {e}")
 
