@@ -222,7 +222,7 @@ def main() -> None:
         **result,
     }
 
-    if context["status"] == "intraday" and is_suspicious(point):
+    if is_suspicious(point):
         preserve_last_valid("即時報價出現異常大量平盤，已略過這筆資料並保留上一筆有效數據。", history, intraday)
         return
 
