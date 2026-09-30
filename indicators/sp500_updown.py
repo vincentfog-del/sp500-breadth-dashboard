@@ -64,7 +64,12 @@ def market_context(now: datetime) -> dict[str, Any]:
 
     if not active.empty:
         row = active.iloc[-1]
-        return {"status": "intraday", "session": active.index[-1].date().isoformat(), "close": row.market_close.to_pydatetime()}
+        return {
+            "status": "intraday",
+            "session": active.index[-1].date().isoformat(),
+            "open": row.market_open.to_pydatetime(),
+            "close": row.market_close.to_pydatetime(),
+        }
     if not completed.empty:
         row = completed.iloc[-1]
         return {"status": "closed", "session": completed.index[-1].date().isoformat(), "close": row.market_close.to_pydatetime()}
@@ -172,9 +177,41 @@ def calculate_history(close: pd.DataFrame, cutoff: datetime) -> list[dict[str, A
     return records
 
 
+def is_suspicious(point: dict[str, Any]) -> bool:
+    """Detect the temporary all-flat snapshot Yahoo can return just after the open."""
+    total = int(point.get("total", 0))
+    directional = int(point.get("up", 0)) + int(point.get("down", 0))
+    flat = int(point.get("flat", 0))
+    return total < 450 or directional < 50 or (total > 0 and flat / total >= 0.80)
+
+
+def preserve_last_valid(reason: str, history: list[dict[str, Any]], intraday: list[dict[str, Any]]) -> None:
+    """Keep the newest trustworthy value instead of replacing it with a false zero."""
+    valid_intraday = [row for row in intraday if not is_suspicious(row)]
+    valid_history = [row for row in history if not is_suspicious(row)]
+    if valid_intraday:
+        fallback = valid_intraday[-1]
+    elif valid_history:
+        fallback = valid_history[-1]
+    else:
+        raise RuntimeError(f"No valid previous observation is available: {reason}")
+    latest = {**fallback, "stale": True, "data_warning": reason}
+    atomic_json(DATA_DIR / "latest.json", latest)
+    print(json.dumps(latest, ensure_ascii=False))
+
+
 def main() -> None:
     now = datetime.now(UTC)
     context = market_context(now)
+    history_path = DATA_DIR / "history.json"
+    intraday_path = DATA_DIR / "intraday.json"
+    history = read_json(history_path, [])
+    intraday = read_json(intraday_path, [])
+
+    if context["status"] == "intraday" and now < context["open"] + timedelta(minutes=15):
+        preserve_last_valid("開盤前 15 分鐘報價尚未穩定，暫時保留上一筆有效數據。", history, intraday)
+        return
+
     tickers = get_constituents()
     close = download_prices(tickers)
     result = calculate(close, context["session"])
@@ -185,10 +222,9 @@ def main() -> None:
         **result,
     }
 
-    history_path = DATA_DIR / "history.json"
-    intraday_path = DATA_DIR / "intraday.json"
-    history = read_json(history_path, [])
-    intraday = read_json(intraday_path, [])
+    if context["status"] == "intraday" and is_suspicious(point):
+        preserve_last_valid("即時報價出現異常大量平盤，已略過這筆資料並保留上一筆有效數據。", history, intraday)
+        return
 
     cutoff = now - timedelta(days=731)
     oldest = min((row.get("session", "9999-12-31") for row in history), default="9999-12-31")
