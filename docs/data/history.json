@@ -1,20 +1,8 @@
 [
   {
-    "session": "2024-10-01",
-    "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
-    "up": 162,
-    "down": 337,
-    "flat": 0,
-    "missing": 4,
-    "total": 499,
-    "up_pct": 32.46,
-    "down_pct": 67.54
-  },
-  {
     "session": "2024-10-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 230,
     "down": 267,
     "flat": 2,
@@ -26,7 +14,7 @@
   {
     "session": "2024-10-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 117,
     "down": 380,
     "flat": 2,
@@ -38,7 +26,7 @@
   {
     "session": "2024-10-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 365,
     "down": 134,
     "flat": 0,
@@ -50,7 +38,7 @@
   {
     "session": "2024-10-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 107,
     "down": 387,
     "flat": 5,
@@ -62,7 +50,7 @@
   {
     "session": "2024-10-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 316,
     "down": 181,
     "flat": 2,
@@ -74,7 +62,7 @@
   {
     "session": "2024-10-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 379,
     "down": 120,
     "flat": 0,
@@ -86,7 +74,7 @@
   {
     "session": "2024-10-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 159,
     "down": 336,
     "flat": 4,
@@ -98,7 +86,7 @@
   {
     "session": "2024-10-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 433,
     "down": 66,
     "flat": 0,
@@ -110,7 +98,7 @@
   {
     "session": "2024-10-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 394,
     "down": 105,
     "flat": 0,
@@ -122,7 +110,7 @@
   {
     "session": "2024-10-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 236,
     "down": 261,
     "flat": 2,
@@ -134,7 +122,7 @@
   {
     "session": "2024-10-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 359,
     "down": 140,
     "flat": 0,
@@ -146,7 +134,7 @@
   {
     "session": "2024-10-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 236,
     "down": 261,
     "flat": 2,
@@ -158,7 +146,7 @@
   {
     "session": "2024-10-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 312,
     "down": 184,
     "flat": 3,
@@ -170,7 +158,7 @@
   {
     "session": "2024-10-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 87,
     "down": 409,
     "flat": 3,
@@ -182,7 +170,7 @@
   {
     "session": "2024-10-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 183,
     "down": 314,
     "flat": 2,
@@ -194,7 +182,7 @@
   {
     "session": "2024-10-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 178,
     "down": 315,
     "flat": 6,
@@ -206,7 +194,7 @@
   {
     "session": "2024-10-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 250,
     "down": 247,
     "flat": 2,
@@ -218,7 +206,7 @@
   {
     "session": "2024-10-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 155,
     "down": 340,
     "flat": 4,
@@ -230,7 +218,7 @@
   {
     "session": "2024-10-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 356,
     "down": 143,
     "flat": 0,
@@ -242,7 +230,7 @@
   {
     "session": "2024-10-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 170,
     "down": 328,
     "flat": 1,
@@ -254,7 +242,7 @@
   {
     "session": "2024-10-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 237,
     "down": 260,
     "flat": 2,
@@ -266,7 +254,7 @@
   {
     "session": "2024-10-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 133,
     "down": 365,
     "flat": 1,
@@ -278,7 +266,7 @@
   {
     "session": "2024-11-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 244,
     "down": 254,
     "flat": 1,
@@ -290,7 +278,7 @@
   {
     "session": "2024-11-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 261,
     "down": 236,
     "flat": 2,
@@ -302,7 +290,7 @@
   {
     "session": "2024-11-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 442,
     "down": 57,
     "flat": 0,
@@ -314,7 +302,7 @@
   {
     "session": "2024-11-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 343,
     "down": 155,
     "flat": 1,
@@ -326,7 +314,7 @@
   {
     "session": "2024-11-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 272,
     "down": 227,
     "flat": 0,
@@ -338,7 +326,7 @@
   {
     "session": "2024-11-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 325,
     "down": 173,
     "flat": 1,
@@ -350,7 +338,7 @@
   {
     "session": "2024-11-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 309,
     "down": 190,
     "flat": 0,
@@ -362,7 +350,7 @@
   {
     "session": "2024-11-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 146,
     "down": 352,
     "flat": 1,
@@ -374,7 +362,7 @@
   {
     "session": "2024-11-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 254,
     "down": 241,
     "flat": 4,
@@ -386,7 +374,7 @@
   {
     "session": "2024-11-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 137,
     "down": 362,
     "flat": 0,
@@ -398,7 +386,7 @@
   {
     "session": "2024-11-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 180,
     "down": 317,
     "flat": 2,
@@ -410,7 +398,7 @@
   {
     "session": "2024-11-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 328,
     "down": 170,
     "flat": 1,
@@ -422,7 +410,7 @@
   {
     "session": "2024-11-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 208,
     "down": 291,
     "flat": 0,
@@ -434,7 +422,7 @@
   {
     "session": "2024-11-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 302,
     "down": 196,
     "flat": 1,
@@ -446,7 +434,7 @@
   {
     "session": "2024-11-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 432,
     "down": 67,
     "flat": 0,
@@ -458,7 +446,7 @@
   {
     "session": "2024-11-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 371,
     "down": 125,
     "flat": 3,
@@ -470,7 +458,7 @@
   {
     "session": "2024-11-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 375,
     "down": 123,
     "flat": 1,
@@ -482,7 +470,7 @@
   {
     "session": "2024-11-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 279,
     "down": 219,
     "flat": 1,
@@ -494,7 +482,7 @@
   {
     "session": "2024-11-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 262,
     "down": 234,
     "flat": 3,
@@ -506,7 +494,7 @@
   {
     "session": "2024-11-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 293,
     "down": 204,
     "flat": 2,
@@ -518,7 +506,7 @@
   {
     "session": "2024-12-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 180,
     "down": 317,
     "flat": 2,
@@ -530,7 +518,7 @@
   {
     "session": "2024-12-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 165,
     "down": 332,
     "flat": 2,
@@ -542,7 +530,7 @@
   {
     "session": "2024-12-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 248,
     "down": 250,
     "flat": 1,
@@ -554,7 +542,7 @@
   {
     "session": "2024-12-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 179,
     "down": 319,
     "flat": 1,
@@ -566,7 +554,7 @@
   {
     "session": "2024-12-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 213,
     "down": 283,
     "flat": 3,
@@ -578,7 +566,7 @@
   {
     "session": "2024-12-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 205,
     "down": 293,
     "flat": 1,
@@ -590,7 +578,7 @@
   {
     "session": "2024-12-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 145,
     "down": 353,
     "flat": 1,
@@ -602,7 +590,7 @@
   {
     "session": "2024-12-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 247,
     "down": 250,
     "flat": 2,
@@ -614,7 +602,7 @@
   {
     "session": "2024-12-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 178,
     "down": 318,
     "flat": 3,
@@ -626,7 +614,7 @@
   {
     "session": "2024-12-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 161,
     "down": 333,
     "flat": 5,
@@ -638,7 +626,7 @@
   {
     "session": "2024-12-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 196,
     "down": 303,
     "flat": 0,
@@ -650,7 +638,7 @@
   {
     "session": "2024-12-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 114,
     "down": 382,
     "flat": 3,
@@ -662,7 +650,7 @@
   {
     "session": "2024-12-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 18,
     "down": 481,
     "flat": 0,
@@ -674,7 +662,7 @@
   {
     "session": "2024-12-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 201,
     "down": 295,
     "flat": 3,
@@ -686,7 +674,7 @@
   {
     "session": "2024-12-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 445,
     "down": 53,
     "flat": 1,
@@ -698,7 +686,7 @@
   {
     "session": "2024-12-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 273,
     "down": 224,
     "flat": 2,
@@ -710,7 +698,7 @@
   {
     "session": "2024-12-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 462,
     "down": 36,
     "flat": 1,
@@ -722,7 +710,7 @@
   {
     "session": "2024-12-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 278,
     "down": 218,
     "flat": 3,
@@ -734,7 +722,7 @@
   {
     "session": "2024-12-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 45,
     "down": 453,
     "flat": 1,
@@ -746,7 +734,7 @@
   {
     "session": "2024-12-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 35,
     "down": 463,
     "flat": 1,
@@ -758,7 +746,7 @@
   {
     "session": "2024-12-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 271,
     "down": 221,
     "flat": 7,
@@ -770,7 +758,7 @@
   {
     "session": "2025-01-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 188,
     "down": 310,
     "flat": 1,
@@ -782,7 +770,7 @@
   {
     "session": "2025-01-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 397,
     "down": 102,
     "flat": 0,
@@ -794,7 +782,7 @@
   {
     "session": "2025-01-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 237,
     "down": 260,
     "flat": 2,
@@ -806,7 +794,7 @@
   {
     "session": "2025-01-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 203,
     "down": 294,
     "flat": 2,
@@ -818,7 +806,7 @@
   {
     "session": "2025-01-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 291,
     "down": 204,
     "flat": 4,
@@ -830,7 +818,7 @@
   {
     "session": "2025-01-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 63,
     "down": 434,
     "flat": 2,
@@ -842,7 +830,7 @@
   {
     "session": "2025-01-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 358,
     "down": 139,
     "flat": 2,
@@ -854,7 +842,7 @@
   {
     "session": "2025-01-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 381,
     "down": 115,
     "flat": 3,
@@ -866,7 +854,7 @@
   {
     "session": "2025-01-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 372,
     "down": 127,
     "flat": 0,
@@ -878,7 +866,7 @@
   {
     "session": "2025-01-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 375,
     "down": 121,
     "flat": 3,
@@ -890,7 +878,7 @@
   {
     "session": "2025-01-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 343,
     "down": 152,
     "flat": 4,
@@ -902,7 +890,7 @@
   {
     "session": "2025-01-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 416,
     "down": 82,
     "flat": 1,
@@ -914,7 +902,7 @@
   {
     "session": "2025-01-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 184,
     "down": 314,
     "flat": 1,
@@ -926,7 +914,7 @@
   {
     "session": "2025-01-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 321,
     "down": 174,
     "flat": 4,
@@ -938,7 +926,7 @@
   {
     "session": "2025-01-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 247,
     "down": 246,
     "flat": 6,
@@ -950,7 +938,7 @@
   {
     "session": "2025-01-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 331,
     "down": 168,
     "flat": 0,
@@ -962,7 +950,7 @@
   {
     "session": "2025-01-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 166,
     "down": 330,
     "flat": 3,
@@ -974,7 +962,7 @@
   {
     "session": "2025-01-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 218,
     "down": 281,
     "flat": 0,
@@ -986,7 +974,7 @@
   {
     "session": "2025-01-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 412,
     "down": 86,
     "flat": 1,
@@ -998,7 +986,7 @@
   {
     "session": "2025-01-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 123,
     "down": 375,
     "flat": 1,
@@ -1010,7 +998,7 @@
   {
     "session": "2025-02-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 181,
     "down": 318,
     "flat": 0,
@@ -1022,7 +1010,7 @@
   {
     "session": "2025-02-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 252,
     "down": 245,
     "flat": 2,
@@ -1034,7 +1022,7 @@
   {
     "session": "2025-02-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 354,
     "down": 143,
     "flat": 2,
@@ -1046,7 +1034,7 @@
   {
     "session": "2025-02-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 264,
     "down": 232,
     "flat": 3,
@@ -1058,7 +1046,7 @@
   {
     "session": "2025-02-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 137,
     "down": 359,
     "flat": 3,
@@ -1070,7 +1058,7 @@
   {
     "session": "2025-02-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 291,
     "down": 206,
     "flat": 2,
@@ -1082,7 +1070,7 @@
   {
     "session": "2025-02-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 249,
     "down": 249,
     "flat": 1,
@@ -1094,7 +1082,7 @@
   {
     "session": "2025-02-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 163,
     "down": 335,
     "flat": 1,
@@ -1106,7 +1094,7 @@
   {
     "session": "2025-02-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 385,
     "down": 114,
     "flat": 0,
@@ -1118,7 +1106,7 @@
   {
     "session": "2025-02-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 211,
     "down": 288,
     "flat": 1,
@@ -1130,7 +1118,7 @@
   {
     "session": "2025-02-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 358,
     "down": 140,
     "flat": 2,
@@ -1142,7 +1130,7 @@
   {
     "session": "2025-02-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 291,
     "down": 209,
     "flat": 0,
@@ -1154,7 +1142,7 @@
   {
     "session": "2025-02-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 220,
     "down": 280,
     "flat": 0,
@@ -1166,7 +1154,7 @@
   {
     "session": "2025-02-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 115,
     "down": 384,
     "flat": 1,
@@ -1178,7 +1166,7 @@
   {
     "session": "2025-02-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 266,
     "down": 233,
     "flat": 1,
@@ -1190,7 +1178,7 @@
   {
     "session": "2025-02-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 285,
     "down": 214,
     "flat": 1,
@@ -1202,7 +1190,7 @@
   {
     "session": "2025-02-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 212,
     "down": 286,
     "flat": 2,
@@ -1214,7 +1202,7 @@
   {
     "session": "2025-02-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 182,
     "down": 318,
     "flat": 0,
@@ -1226,7 +1214,7 @@
   {
     "session": "2025-02-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 444,
     "down": 55,
     "flat": 1,
@@ -1238,7 +1226,7 @@
   {
     "session": "2025-03-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 161,
     "down": 338,
     "flat": 1,
@@ -1250,7 +1238,7 @@
   {
     "session": "2025-03-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 83,
     "down": 416,
     "flat": 1,
@@ -1262,7 +1250,7 @@
   {
     "session": "2025-03-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 379,
     "down": 120,
     "flat": 1,
@@ -1274,7 +1262,7 @@
   {
     "session": "2025-03-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 146,
     "down": 354,
     "flat": 0,
@@ -1286,7 +1274,7 @@
   {
     "session": "2025-03-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 338,
     "down": 161,
     "flat": 1,
@@ -1298,7 +1286,7 @@
   {
     "session": "2025-03-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 139,
     "down": 359,
     "flat": 2,
@@ -1310,7 +1298,7 @@
   {
     "session": "2025-03-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 132,
     "down": 366,
     "flat": 2,
@@ -1322,7 +1310,7 @@
   {
     "session": "2025-03-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 198,
     "down": 301,
     "flat": 1,
@@ -1334,7 +1322,7 @@
   {
     "session": "2025-03-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 126,
     "down": 374,
     "flat": 0,
@@ -1346,7 +1334,7 @@
   {
     "session": "2025-03-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 453,
     "down": 47,
     "flat": 0,
@@ -1358,7 +1346,7 @@
   {
     "session": "2025-03-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 457,
     "down": 42,
     "flat": 1,
@@ -1370,7 +1358,7 @@
   {
     "session": "2025-03-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 152,
     "down": 347,
     "flat": 1,
@@ -1382,7 +1370,7 @@
   {
     "session": "2025-03-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 375,
     "down": 124,
     "flat": 1,
@@ -1394,7 +1382,7 @@
   {
     "session": "2025-03-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 178,
     "down": 317,
     "flat": 5,
@@ -1406,7 +1394,7 @@
   {
     "session": "2025-03-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 152,
     "down": 347,
     "flat": 1,
@@ -1418,7 +1406,7 @@
   {
     "session": "2025-03-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 423,
     "down": 76,
     "flat": 1,
@@ -1430,7 +1418,7 @@
   {
     "session": "2025-03-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 221,
     "down": 277,
     "flat": 2,
@@ -1442,7 +1430,7 @@
   {
     "session": "2025-03-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 248,
     "down": 250,
     "flat": 2,
@@ -1454,7 +1442,7 @@
   {
     "session": "2025-03-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 201,
     "down": 296,
     "flat": 3,
@@ -1466,7 +1454,7 @@
   {
     "session": "2025-03-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 85,
     "down": 415,
     "flat": 0,
@@ -1478,7 +1466,7 @@
   {
     "session": "2025-03-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 373,
     "down": 123,
     "flat": 4,
@@ -1490,7 +1478,7 @@
   {
     "session": "2025-04-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 305,
     "down": 194,
     "flat": 1,
@@ -1502,7 +1490,7 @@
   {
     "session": "2025-04-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 394,
     "down": 106,
     "flat": 0,
@@ -1514,7 +1502,7 @@
   {
     "session": "2025-04-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 88,
     "down": 411,
     "flat": 1,
@@ -1526,7 +1514,7 @@
   {
     "session": "2025-04-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 12,
     "down": 488,
     "flat": 0,
@@ -1538,7 +1526,7 @@
   {
     "session": "2025-04-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 175,
     "down": 324,
     "flat": 1,
@@ -1550,7 +1538,7 @@
   {
     "session": "2025-04-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 74,
     "down": 426,
     "flat": 0,
@@ -1562,7 +1550,7 @@
   {
     "session": "2025-04-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 492,
     "down": 8,
     "flat": 0,
@@ -1574,7 +1562,7 @@
   {
     "session": "2025-04-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 71,
     "down": 428,
     "flat": 1,
@@ -1586,7 +1574,7 @@
   {
     "session": "2025-04-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 432,
     "down": 66,
     "flat": 2,
@@ -1598,7 +1586,7 @@
   {
     "session": "2025-04-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 430,
     "down": 69,
     "flat": 1,
@@ -1610,7 +1598,7 @@
   {
     "session": "2025-04-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 208,
     "down": 290,
     "flat": 2,
@@ -1622,7 +1610,7 @@
   {
     "session": "2025-04-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 64,
     "down": 435,
     "flat": 1,
@@ -1634,7 +1622,7 @@
   {
     "session": "2025-04-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 374,
     "down": 125,
     "flat": 1,
@@ -1646,7 +1634,7 @@
   {
     "session": "2025-04-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 34,
     "down": 466,
     "flat": 0,
@@ -1658,7 +1646,7 @@
   {
     "session": "2025-04-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 490,
     "down": 10,
     "flat": 0,
@@ -1670,7 +1658,7 @@
   {
     "session": "2025-04-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 371,
     "down": 127,
     "flat": 2,
@@ -1682,7 +1670,7 @@
   {
     "session": "2025-04-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 409,
     "down": 90,
     "flat": 1,
@@ -1694,7 +1682,7 @@
   {
     "session": "2025-04-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 215,
     "down": 283,
     "flat": 2,
@@ -1706,7 +1694,7 @@
   {
     "session": "2025-04-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 337,
     "down": 162,
     "flat": 1,
@@ -1718,7 +1706,7 @@
   {
     "session": "2025-04-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 372,
     "down": 127,
     "flat": 1,
@@ -1730,7 +1718,7 @@
   {
     "session": "2025-04-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 312,
     "down": 186,
     "flat": 2,
@@ -1742,7 +1730,7 @@
   {
     "session": "2025-05-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 219,
     "down": 280,
     "flat": 1,
@@ -1754,7 +1742,7 @@
   {
     "session": "2025-05-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 457,
     "down": 43,
     "flat": 0,
@@ -1766,7 +1754,7 @@
   {
     "session": "2025-05-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 194,
     "down": 303,
     "flat": 3,
@@ -1778,7 +1766,7 @@
   {
     "session": "2025-05-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 146,
     "down": 351,
     "flat": 3,
@@ -1790,7 +1778,7 @@
   {
     "session": "2025-05-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 363,
     "down": 134,
     "flat": 3,
@@ -1802,7 +1790,7 @@
   {
     "session": "2025-05-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 348,
     "down": 149,
     "flat": 3,
@@ -1814,7 +1802,7 @@
   {
     "session": "2025-05-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 235,
     "down": 262,
     "flat": 3,
@@ -1826,7 +1814,7 @@
   {
     "session": "2025-05-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 408,
     "down": 91,
     "flat": 1,
@@ -1838,7 +1826,7 @@
   {
     "session": "2025-05-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 252,
     "down": 246,
     "flat": 2,
@@ -1850,7 +1838,7 @@
   {
     "session": "2025-05-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 155,
     "down": 342,
     "flat": 3,
@@ -1862,7 +1850,7 @@
   {
     "session": "2025-05-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 361,
     "down": 139,
     "flat": 0,
@@ -1874,7 +1862,7 @@
   {
     "session": "2025-05-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 443,
     "down": 57,
     "flat": 0,
@@ -1886,7 +1874,7 @@
   {
     "session": "2025-05-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 250,
     "down": 247,
     "flat": 3,
@@ -1898,7 +1886,7 @@
   {
     "session": "2025-05-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 170,
     "down": 327,
     "flat": 3,
@@ -1910,7 +1898,7 @@
   {
     "session": "2025-05-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 19,
     "down": 480,
     "flat": 1,
@@ -1922,7 +1910,7 @@
   {
     "session": "2025-05-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 194,
     "down": 299,
     "flat": 7,
@@ -1934,7 +1922,7 @@
   {
     "session": "2025-05-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 175,
     "down": 322,
     "flat": 3,
@@ -1946,7 +1934,7 @@
   {
     "session": "2025-05-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 466,
     "down": 33,
     "flat": 1,
@@ -1958,7 +1946,7 @@
   {
     "session": "2025-05-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 86,
     "down": 413,
     "flat": 1,
@@ -1970,7 +1958,7 @@
   {
     "session": "2025-05-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 347,
     "down": 147,
     "flat": 6,
@@ -1982,7 +1970,7 @@
   {
     "session": "2025-05-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 256,
     "down": 242,
     "flat": 2,
@@ -1994,7 +1982,7 @@
   {
     "session": "2025-06-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 237,
     "down": 261,
     "flat": 2,
@@ -2006,7 +1994,7 @@
   {
     "session": "2025-06-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 358,
     "down": 141,
     "flat": 1,
@@ -2018,7 +2006,7 @@
   {
     "session": "2025-06-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 198,
     "down": 300,
     "flat": 2,
@@ -2030,7 +2018,7 @@
   {
     "session": "2025-06-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 191,
     "down": 307,
     "flat": 2,
@@ -2042,7 +2030,7 @@
   {
     "session": "2025-06-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 411,
     "down": 88,
     "flat": 1,
@@ -2054,7 +2042,7 @@
   {
     "session": "2025-06-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 252,
     "down": 245,
     "flat": 3,
@@ -2066,7 +2054,7 @@
   {
     "session": "2025-06-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 319,
     "down": 179,
     "flat": 2,
@@ -2078,7 +2066,7 @@
   {
     "session": "2025-06-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 173,
     "down": 326,
     "flat": 1,
@@ -2090,7 +2078,7 @@
   {
     "session": "2025-06-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 305,
     "down": 193,
     "flat": 2,
@@ -2102,7 +2090,7 @@
   {
     "session": "2025-06-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 69,
     "down": 431,
     "flat": 0,
@@ -2114,7 +2102,7 @@
   {
     "session": "2025-06-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 367,
     "down": 133,
     "flat": 0,
@@ -2126,7 +2114,7 @@
   {
     "session": "2025-06-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 92,
     "down": 407,
     "flat": 1,
@@ -2138,7 +2126,7 @@
   {
     "session": "2025-06-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 248,
     "down": 248,
     "flat": 4,
@@ -2150,7 +2138,7 @@
   {
     "session": "2025-06-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 293,
     "down": 204,
     "flat": 3,
@@ -2162,7 +2150,7 @@
   {
     "session": "2025-06-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 395,
     "down": 104,
     "flat": 1,
@@ -2174,7 +2162,7 @@
   {
     "session": "2025-06-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 380,
     "down": 117,
     "flat": 3,
@@ -2186,7 +2174,7 @@
   {
     "session": "2025-06-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 145,
     "down": 355,
     "flat": 0,
@@ -2198,7 +2186,7 @@
   {
     "session": "2025-06-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 376,
     "down": 124,
     "flat": 0,
@@ -2210,7 +2198,7 @@
   {
     "session": "2025-06-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 333,
     "down": 162,
     "flat": 5,
@@ -2222,7 +2210,7 @@
   {
     "session": "2025-06-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 353,
     "down": 145,
     "flat": 2,
@@ -2234,7 +2222,7 @@
   {
     "session": "2025-07-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 364,
     "down": 135,
     "flat": 1,
@@ -2246,7 +2234,7 @@
   {
     "session": "2025-07-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 290,
     "down": 208,
     "flat": 2,
@@ -2258,7 +2246,7 @@
   {
     "session": "2025-07-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 358,
     "down": 138,
     "flat": 4,
@@ -2270,7 +2258,7 @@
   {
     "session": "2025-07-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 100,
     "down": 397,
     "flat": 3,
@@ -2282,7 +2270,7 @@
   {
     "session": "2025-07-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 258,
     "down": 240,
     "flat": 2,
@@ -2294,7 +2282,7 @@
   {
     "session": "2025-07-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 307,
     "down": 192,
     "flat": 1,
@@ -2306,7 +2294,7 @@
   {
     "session": "2025-07-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 348,
     "down": 150,
     "flat": 2,
@@ -2318,7 +2306,7 @@
   {
     "session": "2025-07-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 112,
     "down": 386,
     "flat": 2,
@@ -2330,7 +2318,7 @@
   {
     "session": "2025-07-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 292,
     "down": 207,
     "flat": 1,
@@ -2342,7 +2330,7 @@
   {
     "session": "2025-07-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 55,
     "down": 445,
     "flat": 0,
@@ -2354,7 +2342,7 @@
   {
     "session": "2025-07-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 338,
     "down": 160,
     "flat": 2,
@@ -2366,7 +2354,7 @@
   {
     "session": "2025-07-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 371,
     "down": 127,
     "flat": 2,
@@ -2378,7 +2366,7 @@
   {
     "session": "2025-07-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 257,
     "down": 241,
     "flat": 2,
@@ -2390,7 +2378,7 @@
   {
     "session": "2025-07-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 185,
     "down": 315,
     "flat": 0,
@@ -2402,7 +2390,7 @@
   {
     "session": "2025-07-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 389,
     "down": 111,
     "flat": 0,
@@ -2414,7 +2402,7 @@
   {
     "session": "2025-07-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 348,
     "down": 152,
     "flat": 0,
@@ -2426,7 +2414,7 @@
   {
     "session": "2025-07-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 222,
     "down": 277,
     "flat": 1,
@@ -2438,7 +2426,7 @@
   {
     "session": "2025-07-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 337,
     "down": 159,
     "flat": 4,
@@ -2450,7 +2438,7 @@
   {
     "session": "2025-07-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 155,
     "down": 344,
     "flat": 1,
@@ -2462,7 +2450,7 @@
   {
     "session": "2025-07-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 253,
     "down": 244,
     "flat": 3,
@@ -2474,7 +2462,7 @@
   {
     "session": "2025-07-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 167,
     "down": 331,
     "flat": 2,
@@ -2486,7 +2474,7 @@
   {
     "session": "2025-07-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 140,
     "down": 358,
     "flat": 2,
@@ -2498,7 +2486,7 @@
   {
     "session": "2025-08-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 137,
     "down": 362,
     "flat": 1,
@@ -2510,7 +2498,7 @@
   {
     "session": "2025-08-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 431,
     "down": 67,
     "flat": 2,
@@ -2522,7 +2510,7 @@
   {
     "session": "2025-08-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 214,
     "down": 284,
     "flat": 2,
@@ -2534,7 +2522,7 @@
   {
     "session": "2025-08-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 242,
     "down": 258,
     "flat": 0,
@@ -2546,7 +2534,7 @@
   {
     "session": "2025-08-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 246,
     "down": 248,
     "flat": 6,
@@ -2558,7 +2546,7 @@
   {
     "session": "2025-08-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 298,
     "down": 198,
     "flat": 4,
@@ -2570,7 +2558,7 @@
   {
     "session": "2025-08-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 174,
     "down": 320,
     "flat": 6,
@@ -2582,7 +2570,7 @@
   {
     "session": "2025-08-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 400,
     "down": 98,
     "flat": 2,
@@ -2594,7 +2582,7 @@
   {
     "session": "2025-08-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 404,
     "down": 96,
     "flat": 0,
@@ -2606,7 +2594,7 @@
   {
     "session": "2025-08-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 142,
     "down": 356,
     "flat": 2,
@@ -2618,7 +2606,7 @@
   {
     "session": "2025-08-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 204,
     "down": 294,
     "flat": 2,
@@ -2630,7 +2618,7 @@
   {
     "session": "2025-08-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 237,
     "down": 262,
     "flat": 1,
@@ -2642,7 +2630,7 @@
   {
     "session": "2025-08-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 337,
     "down": 162,
     "flat": 1,
@@ -2654,7 +2642,7 @@
   {
     "session": "2025-08-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 256,
     "down": 241,
     "flat": 3,
@@ -2666,7 +2654,7 @@
   {
     "session": "2025-08-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 166,
     "down": 333,
     "flat": 1,
@@ -2678,7 +2666,7 @@
   {
     "session": "2025-08-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 418,
     "down": 82,
     "flat": 0,
@@ -2690,7 +2678,7 @@
   {
     "session": "2025-08-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 105,
     "down": 392,
     "flat": 3,
@@ -2702,7 +2690,7 @@
   {
     "session": "2025-08-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 273,
     "down": 225,
     "flat": 2,
@@ -2714,7 +2702,7 @@
   {
     "session": "2025-08-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 339,
     "down": 159,
     "flat": 2,
@@ -2726,7 +2714,7 @@
   {
     "session": "2025-08-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 229,
     "down": 269,
     "flat": 2,
@@ -2738,7 +2726,7 @@
   {
     "session": "2025-08-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 267,
     "down": 231,
     "flat": 2,
@@ -2750,7 +2738,7 @@
   {
     "session": "2025-09-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 122,
     "down": 376,
     "flat": 2,
@@ -2762,7 +2750,7 @@
   {
     "session": "2025-09-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 229,
     "down": 271,
     "flat": 0,
@@ -2774,7 +2762,7 @@
   {
     "session": "2025-09-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 370,
     "down": 128,
     "flat": 2,
@@ -2786,7 +2774,7 @@
   {
     "session": "2025-09-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 265,
     "down": 235,
     "flat": 0,
@@ -2798,7 +2786,7 @@
   {
     "session": "2025-09-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 246,
     "down": 251,
     "flat": 3,
@@ -2810,7 +2798,7 @@
   {
     "session": "2025-09-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 211,
     "down": 287,
     "flat": 2,
@@ -2822,7 +2810,7 @@
   {
     "session": "2025-09-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 213,
     "down": 286,
     "flat": 1,
@@ -2834,7 +2822,7 @@
   {
     "session": "2025-09-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 430,
     "down": 67,
     "flat": 3,
@@ -2846,7 +2834,7 @@
   {
     "session": "2025-09-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 118,
     "down": 380,
     "flat": 2,
@@ -2858,7 +2846,7 @@
   {
     "session": "2025-09-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 209,
     "down": 289,
     "flat": 2,
@@ -2870,7 +2858,7 @@
   {
     "session": "2025-09-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 186,
     "down": 312,
     "flat": 2,
@@ -2882,7 +2870,7 @@
   {
     "session": "2025-09-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 291,
     "down": 208,
     "flat": 1,
@@ -2894,7 +2882,7 @@
   {
     "session": "2025-09-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 324,
     "down": 174,
     "flat": 2,
@@ -2906,7 +2894,7 @@
   {
     "session": "2025-09-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 224,
     "down": 274,
     "flat": 2,
@@ -2918,7 +2906,7 @@
   {
     "session": "2025-09-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 251,
     "down": 247,
     "flat": 2,
@@ -2930,7 +2918,7 @@
   {
     "session": "2025-09-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 272,
     "down": 225,
     "flat": 3,
@@ -2942,7 +2930,7 @@
   {
     "session": "2025-09-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 210,
     "down": 287,
     "flat": 3,
@@ -2954,7 +2942,7 @@
   {
     "session": "2025-09-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 121,
     "down": 378,
     "flat": 1,
@@ -2966,7 +2954,7 @@
   {
     "session": "2025-09-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 422,
     "down": 77,
     "flat": 1,
@@ -2978,7 +2966,7 @@
   {
     "session": "2025-09-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 310,
     "down": 190,
     "flat": 0,
@@ -2990,7 +2978,7 @@
   {
     "session": "2025-09-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 302,
     "down": 197,
     "flat": 1,
@@ -3002,7 +2990,7 @@
   {
     "session": "2025-10-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 218,
     "down": 281,
     "flat": 1,
@@ -3014,7 +3002,7 @@
   {
     "session": "2025-10-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 272,
     "down": 224,
     "flat": 4,
@@ -3026,7 +3014,7 @@
   {
     "session": "2025-10-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 316,
     "down": 182,
     "flat": 2,
@@ -3038,7 +3026,7 @@
   {
     "session": "2025-10-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 242,
     "down": 258,
     "flat": 0,
@@ -3050,7 +3038,7 @@
   {
     "session": "2025-10-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 196,
     "down": 302,
     "flat": 2,
@@ -3062,7 +3050,7 @@
   {
     "session": "2025-10-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 270,
     "down": 228,
     "flat": 2,
@@ -3074,7 +3062,7 @@
   {
     "session": "2025-10-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 121,
     "down": 378,
     "flat": 1,
@@ -3086,7 +3074,7 @@
   {
     "session": "2025-10-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 78,
     "down": 422,
     "flat": 0,
@@ -3098,7 +3086,7 @@
   {
     "session": "2025-10-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 359,
     "down": 138,
     "flat": 3,
@@ -3110,7 +3098,7 @@
   {
     "session": "2025-10-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 380,
     "down": 119,
     "flat": 1,
@@ -3122,7 +3110,7 @@
   {
     "session": "2025-10-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 253,
     "down": 244,
     "flat": 3,
@@ -3134,7 +3122,7 @@
   {
     "session": "2025-10-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 132,
     "down": 367,
     "flat": 1,
@@ -3146,7 +3134,7 @@
   {
     "session": "2025-10-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 352,
     "down": 147,
     "flat": 1,
@@ -3158,7 +3146,7 @@
   {
     "session": "2025-10-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 409,
     "down": 87,
     "flat": 4,
@@ -3170,7 +3158,7 @@
   {
     "session": "2025-10-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 292,
     "down": 206,
     "flat": 2,
@@ -3182,7 +3170,7 @@
   {
     "session": "2025-10-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 188,
     "down": 310,
     "flat": 2,
@@ -3194,7 +3182,7 @@
   {
     "session": "2025-10-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 291,
     "down": 208,
     "flat": 1,
@@ -3206,7 +3194,7 @@
   {
     "session": "2025-10-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 268,
     "down": 229,
     "flat": 3,
@@ -3218,7 +3206,7 @@
   {
     "session": "2025-10-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 327,
     "down": 171,
     "flat": 2,
@@ -3230,7 +3218,7 @@
   {
     "session": "2025-10-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 108,
     "down": 392,
     "flat": 1,
@@ -3242,7 +3230,7 @@
   {
     "session": "2025-10-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 134,
     "down": 366,
     "flat": 1,
@@ -3254,7 +3242,7 @@
   {
     "session": "2025-10-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 227,
     "down": 272,
     "flat": 2,
@@ -3266,7 +3254,7 @@
   {
     "session": "2025-10-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 265,
     "down": 232,
     "flat": 4,
@@ -3278,7 +3266,7 @@
   {
     "session": "2025-11-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 189,
     "down": 310,
     "flat": 2,
@@ -3290,7 +3278,7 @@
   {
     "session": "2025-11-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 214,
     "down": 286,
     "flat": 1,
@@ -3302,7 +3290,7 @@
   {
     "session": "2025-11-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 311,
     "down": 186,
     "flat": 4,
@@ -3314,7 +3302,7 @@
   {
     "session": "2025-11-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 163,
     "down": 338,
     "flat": 0,
@@ -3326,7 +3314,7 @@
   {
     "session": "2025-11-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 382,
     "down": 117,
     "flat": 2,
@@ -3338,7 +3326,7 @@
   {
     "session": "2025-11-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 320,
     "down": 179,
     "flat": 2,
@@ -3350,7 +3338,7 @@
   {
     "session": "2025-11-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 337,
     "down": 163,
     "flat": 1,
@@ -3362,7 +3350,7 @@
   {
     "session": "2025-11-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 295,
     "down": 203,
     "flat": 2,
@@ -3374,7 +3362,7 @@
   {
     "session": "2025-11-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 126,
     "down": 372,
     "flat": 2,
@@ -3386,7 +3374,7 @@
   {
     "session": "2025-11-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 186,
     "down": 309,
     "flat": 6,
@@ -3398,7 +3386,7 @@
   {
     "session": "2025-11-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 96,
     "down": 405,
     "flat": 0,
@@ -3410,7 +3398,7 @@
   {
     "session": "2025-11-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 243,
     "down": 258,
     "flat": 0,
@@ -3422,7 +3410,7 @@
   {
     "session": "2025-11-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 203,
     "down": 294,
     "flat": 4,
@@ -3434,7 +3422,7 @@
   {
     "session": "2025-11-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 146,
     "down": 354,
     "flat": 1,
@@ -3446,7 +3434,7 @@
   {
     "session": "2025-11-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 444,
     "down": 56,
     "flat": 1,
@@ -3458,7 +3446,7 @@
   {
     "session": "2025-11-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 267,
     "down": 232,
     "flat": 2,
@@ -3470,7 +3458,7 @@
   {
     "session": "2025-11-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 422,
     "down": 76,
     "flat": 3,
@@ -3482,7 +3470,7 @@
   {
     "session": "2025-11-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 364,
     "down": 136,
     "flat": 1,
@@ -3494,7 +3482,7 @@
   {
     "session": "2025-11-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 377,
     "down": 123,
     "flat": 1,
@@ -3506,7 +3494,7 @@
   {
     "session": "2025-12-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 128,
     "down": 372,
     "flat": 1,
@@ -3518,7 +3506,7 @@
   {
     "session": "2025-12-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 219,
     "down": 281,
     "flat": 1,
@@ -3530,7 +3518,7 @@
   {
     "session": "2025-12-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 335,
     "down": 165,
     "flat": 1,
@@ -3542,7 +3530,7 @@
   {
     "session": "2025-12-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 258,
     "down": 241,
     "flat": 2,
@@ -3554,7 +3542,7 @@
   {
     "session": "2025-12-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 260,
     "down": 240,
     "flat": 1,
@@ -3566,7 +3554,7 @@
   {
     "session": "2025-12-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 160,
     "down": 340,
     "flat": 1,
@@ -3578,7 +3566,7 @@
   {
     "session": "2025-12-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 215,
     "down": 285,
     "flat": 1,
@@ -3590,7 +3578,7 @@
   {
     "session": "2025-12-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 390,
     "down": 110,
     "flat": 1,
@@ -3602,7 +3590,7 @@
   {
     "session": "2025-12-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 367,
     "down": 131,
     "flat": 3,
@@ -3614,7 +3602,7 @@
   {
     "session": "2025-12-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 211,
     "down": 289,
     "flat": 1,
@@ -3626,7 +3614,7 @@
   {
     "session": "2025-12-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 282,
     "down": 216,
     "flat": 3,
@@ -3638,7 +3626,7 @@
   {
     "session": "2025-12-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 134,
     "down": 366,
     "flat": 1,
@@ -3650,7 +3638,7 @@
   {
     "session": "2025-12-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 248,
     "down": 251,
     "flat": 2,
@@ -3662,7 +3650,7 @@
   {
     "session": "2025-12-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 270,
     "down": 228,
     "flat": 3,
@@ -3674,7 +3662,7 @@
   {
     "session": "2025-12-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 291,
     "down": 209,
     "flat": 1,
@@ -3686,7 +3674,7 @@
   {
     "session": "2025-12-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 396,
     "down": 105,
     "flat": 0,
@@ -3698,7 +3686,7 @@
   {
     "session": "2025-12-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 218,
     "down": 283,
     "flat": 0,
@@ -3710,7 +3698,7 @@
   {
     "session": "2025-12-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 384,
     "down": 115,
     "flat": 2,
@@ -3722,7 +3710,7 @@
   {
     "session": "2025-12-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 259,
     "down": 234,
     "flat": 8,
@@ -3734,7 +3722,7 @@
   {
     "session": "2025-12-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 199,
     "down": 296,
     "flat": 6,
@@ -3746,7 +3734,7 @@
   {
     "session": "2025-12-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 186,
     "down": 312,
     "flat": 3,
@@ -3758,7 +3746,7 @@
   {
     "session": "2025-12-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 15,
     "down": 484,
     "flat": 2,
@@ -3770,7 +3758,7 @@
   {
     "session": "2026-01-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 331,
     "down": 169,
     "flat": 1,
@@ -3782,7 +3770,7 @@
   {
     "session": "2026-01-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 340,
     "down": 159,
     "flat": 2,
@@ -3794,7 +3782,7 @@
   {
     "session": "2026-01-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 378,
     "down": 123,
     "flat": 0,
@@ -3806,7 +3794,7 @@
   {
     "session": "2026-01-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 116,
     "down": 385,
     "flat": 0,
@@ -3818,7 +3806,7 @@
   {
     "session": "2026-01-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 348,
     "down": 153,
     "flat": 0,
@@ -3830,7 +3818,7 @@
   {
     "session": "2026-01-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 286,
     "down": 213,
     "flat": 2,
@@ -3842,7 +3830,7 @@
   {
     "session": "2026-01-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 251,
     "down": 249,
     "flat": 1,
@@ -3854,7 +3842,7 @@
   {
     "session": "2026-01-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 265,
     "down": 236,
     "flat": 0,
@@ -3866,7 +3854,7 @@
   {
     "session": "2026-01-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 308,
     "down": 192,
     "flat": 1,
@@ -3878,7 +3866,7 @@
   {
     "session": "2026-01-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 312,
     "down": 188,
     "flat": 1,
@@ -3890,7 +3878,7 @@
   {
     "session": "2026-01-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 231,
     "down": 270,
     "flat": 0,
@@ -3902,7 +3890,7 @@
   {
     "session": "2026-01-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 98,
     "down": 401,
     "flat": 2,
@@ -3914,7 +3902,7 @@
   {
     "session": "2026-01-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 409,
     "down": 92,
     "flat": 0,
@@ -3926,7 +3914,7 @@
   {
     "session": "2026-01-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 281,
     "down": 217,
     "flat": 3,
@@ -3938,7 +3926,7 @@
   {
     "session": "2026-01-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 182,
     "down": 318,
     "flat": 1,
@@ -3950,7 +3938,7 @@
   {
     "session": "2026-01-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 317,
     "down": 184,
     "flat": 0,
@@ -3962,7 +3950,7 @@
   {
     "session": "2026-01-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 239,
     "down": 262,
     "flat": 0,
@@ -3974,7 +3962,7 @@
   {
     "session": "2026-01-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 196,
     "down": 305,
     "flat": 0,
@@ -3986,7 +3974,7 @@
   {
     "session": "2026-01-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 283,
     "down": 214,
     "flat": 4,
@@ -3998,7 +3986,7 @@
   {
     "session": "2026-01-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 239,
     "down": 261,
     "flat": 1,
@@ -4010,7 +3998,7 @@
   {
     "session": "2026-02-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 297,
     "down": 204,
     "flat": 0,
@@ -4022,7 +4010,7 @@
   {
     "session": "2026-02-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 273,
     "down": 227,
     "flat": 1,
@@ -4034,7 +4022,7 @@
   {
     "session": "2026-02-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 354,
     "down": 147,
     "flat": 0,
@@ -4046,7 +4034,7 @@
   {
     "session": "2026-02-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 180,
     "down": 320,
     "flat": 1,
@@ -4058,7 +4046,7 @@
   {
     "session": "2026-02-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 399,
     "down": 102,
     "flat": 0,
@@ -4070,7 +4058,7 @@
   {
     "session": "2026-02-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 268,
     "down": 232,
     "flat": 1,
@@ -4082,7 +4070,7 @@
   {
     "session": "2026-02-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 295,
     "down": 204,
     "flat": 2,
@@ -4094,7 +4082,7 @@
   {
     "session": "2026-02-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 285,
     "down": 216,
     "flat": 0,
@@ -4106,7 +4094,7 @@
   {
     "session": "2026-02-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 159,
     "down": 342,
     "flat": 0,
@@ -4118,7 +4106,7 @@
   {
     "session": "2026-02-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 368,
     "down": 133,
     "flat": 0,
@@ -4130,7 +4118,7 @@
   {
     "session": "2026-02-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 245,
     "down": 255,
     "flat": 1,
@@ -4142,7 +4130,7 @@
   {
     "session": "2026-02-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 316,
     "down": 184,
     "flat": 1,
@@ -4154,7 +4142,7 @@
   {
     "session": "2026-02-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 208,
     "down": 289,
     "flat": 4,
@@ -4166,7 +4154,7 @@
   {
     "session": "2026-02-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 335,
     "down": 166,
     "flat": 0,
@@ -4178,7 +4166,7 @@
   {
     "session": "2026-02-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 173,
     "down": 326,
     "flat": 2,
@@ -4190,7 +4178,7 @@
   {
     "session": "2026-02-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 356,
     "down": 143,
     "flat": 2,
@@ -4202,7 +4190,7 @@
   {
     "session": "2026-02-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 262,
     "down": 238,
     "flat": 1,
@@ -4214,7 +4202,7 @@
   {
     "session": "2026-02-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 343,
     "down": 155,
     "flat": 3,
@@ -4226,7 +4214,7 @@
   {
     "session": "2026-02-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 275,
     "down": 226,
     "flat": 0,
@@ -4238,7 +4226,7 @@
   {
     "session": "2026-03-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 243,
     "down": 256,
     "flat": 2,
@@ -4250,7 +4238,7 @@
   {
     "session": "2026-03-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 130,
     "down": 370,
     "flat": 1,
@@ -4262,7 +4250,7 @@
   {
     "session": "2026-03-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 284,
     "down": 216,
     "flat": 1,
@@ -4274,7 +4262,7 @@
   {
     "session": "2026-03-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 131,
     "down": 369,
     "flat": 1,
@@ -4286,7 +4274,7 @@
   {
     "session": "2026-03-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 141,
     "down": 359,
     "flat": 1,
@@ -4298,7 +4286,7 @@
   {
     "session": "2026-03-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 256,
     "down": 245,
     "flat": 0,
@@ -4310,7 +4298,7 @@
   {
     "session": "2026-03-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 152,
     "down": 349,
     "flat": 0,
@@ -4322,7 +4310,7 @@
   {
     "session": "2026-03-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 173,
     "down": 325,
     "flat": 3,
@@ -4334,7 +4322,7 @@
   {
     "session": "2026-03-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 109,
     "down": 391,
     "flat": 1,
@@ -4346,7 +4334,7 @@
   {
     "session": "2026-03-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 255,
     "down": 243,
     "flat": 3,
@@ -4358,7 +4346,7 @@
   {
     "session": "2026-03-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 384,
     "down": 116,
     "flat": 1,
@@ -4370,7 +4358,7 @@
   {
     "session": "2026-03-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 314,
     "down": 183,
     "flat": 4,
@@ -4382,7 +4370,7 @@
   {
     "session": "2026-03-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 80,
     "down": 421,
     "flat": 0,
@@ -4394,7 +4382,7 @@
   {
     "session": "2026-03-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 216,
     "down": 285,
     "flat": 0,
@@ -4406,7 +4394,7 @@
   {
     "session": "2026-03-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 110,
     "down": 391,
     "flat": 0,
@@ -4418,7 +4406,7 @@
   {
     "session": "2026-03-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 382,
     "down": 118,
     "flat": 1,
@@ -4430,7 +4418,7 @@
   {
     "session": "2026-03-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 289,
     "down": 212,
     "flat": 0,
@@ -4442,7 +4430,7 @@
   {
     "session": "2026-03-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 324,
     "down": 176,
     "flat": 1,
@@ -4454,7 +4442,7 @@
   {
     "session": "2026-03-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 182,
     "down": 318,
     "flat": 1,
@@ -4466,7 +4454,7 @@
   {
     "session": "2026-03-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 107,
     "down": 391,
     "flat": 3,
@@ -4478,7 +4466,7 @@
   {
     "session": "2026-03-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 269,
     "down": 230,
     "flat": 2,
@@ -4490,7 +4478,7 @@
   {
     "session": "2026-03-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 419,
     "down": 81,
     "flat": 1,
@@ -4502,7 +4490,7 @@
   {
     "session": "2026-04-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 304,
     "down": 195,
     "flat": 2,
@@ -4514,7 +4502,7 @@
   {
     "session": "2026-04-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 299,
     "down": 200,
     "flat": 2,
@@ -4526,7 +4514,7 @@
   {
     "session": "2026-04-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 319,
     "down": 179,
     "flat": 3,
@@ -4538,7 +4526,7 @@
   {
     "session": "2026-04-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 208,
     "down": 292,
     "flat": 1,
@@ -4550,7 +4538,7 @@
   {
     "session": "2026-04-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 424,
     "down": 77,
     "flat": 0,
@@ -4562,7 +4550,7 @@
   {
     "session": "2026-04-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 290,
     "down": 210,
     "flat": 1,
@@ -4574,7 +4562,7 @@
   {
     "session": "2026-04-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 138,
     "down": 362,
     "flat": 1,
@@ -4586,7 +4574,7 @@
   {
     "session": "2026-04-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 361,
     "down": 139,
     "flat": 1,
@@ -4598,7 +4586,7 @@
   {
     "session": "2026-04-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 290,
     "down": 207,
     "flat": 4,
@@ -4610,7 +4598,7 @@
   {
     "session": "2026-04-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 221,
     "down": 278,
     "flat": 2,
@@ -4622,7 +4610,7 @@
   {
     "session": "2026-04-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 300,
     "down": 200,
     "flat": 1,
@@ -4634,7 +4622,7 @@
   {
     "session": "2026-04-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 393,
     "down": 106,
     "flat": 2,
@@ -4646,7 +4634,7 @@
   {
     "session": "2026-04-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 276,
     "down": 223,
     "flat": 2,
@@ -4658,7 +4646,7 @@
   {
     "session": "2026-04-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 166,
     "down": 335,
     "flat": 0,
@@ -4670,7 +4658,7 @@
   {
     "session": "2026-04-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 219,
     "down": 281,
     "flat": 1,
@@ -4682,7 +4670,7 @@
   {
     "session": "2026-04-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 273,
     "down": 227,
     "flat": 1,
@@ -4694,7 +4682,7 @@
   {
     "session": "2026-04-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 180,
     "down": 319,
     "flat": 2,
@@ -4706,7 +4694,7 @@
   {
     "session": "2026-04-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 229,
     "down": 270,
     "flat": 2,
@@ -4718,7 +4706,7 @@
   {
     "session": "2026-04-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 227,
     "down": 273,
     "flat": 1,
@@ -4730,7 +4718,7 @@
   {
     "session": "2026-04-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 167,
     "down": 333,
     "flat": 1,
@@ -4742,7 +4730,7 @@
   {
     "session": "2026-04-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 378,
     "down": 118,
     "flat": 5,
@@ -4754,7 +4742,7 @@
   {
     "session": "2026-05-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 177,
     "down": 322,
     "flat": 2,
@@ -4766,7 +4754,7 @@
   {
     "session": "2026-05-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 156,
     "down": 342,
     "flat": 3,
@@ -4778,7 +4766,7 @@
   {
     "session": "2026-05-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 320,
     "down": 181,
     "flat": 0,
@@ -4790,7 +4778,7 @@
   {
     "session": "2026-05-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 316,
     "down": 184,
     "flat": 1,
@@ -4802,7 +4790,7 @@
   {
     "session": "2026-05-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 172,
     "down": 329,
     "flat": 0,
@@ -4814,7 +4802,7 @@
   {
     "session": "2026-05-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 213,
     "down": 288,
     "flat": 0,
@@ -4826,7 +4814,7 @@
   {
     "session": "2026-05-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 221,
     "down": 280,
     "flat": 0,
@@ -4838,7 +4826,7 @@
   {
     "session": "2026-05-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 259,
     "down": 241,
     "flat": 1,
@@ -4850,7 +4838,7 @@
   {
     "session": "2026-05-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 176,
     "down": 323,
     "flat": 2,
@@ -4862,7 +4850,7 @@
   {
     "session": "2026-05-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 298,
     "down": 202,
     "flat": 1,
@@ -4874,7 +4862,7 @@
   {
     "session": "2026-05-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 138,
     "down": 361,
     "flat": 2,
@@ -4886,7 +4874,7 @@
   {
     "session": "2026-05-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 352,
     "down": 147,
     "flat": 2,
@@ -4898,7 +4886,7 @@
   {
     "session": "2026-05-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 185,
     "down": 315,
     "flat": 1,
@@ -4910,7 +4898,7 @@
   {
     "session": "2026-05-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 350,
     "down": 149,
     "flat": 2,
@@ -4922,7 +4910,7 @@
   {
     "session": "2026-05-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 288,
     "down": 209,
     "flat": 4,
@@ -4934,7 +4922,7 @@
   {
     "session": "2026-05-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 348,
     "down": 152,
     "flat": 1,
@@ -4946,7 +4934,7 @@
   {
     "session": "2026-05-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 252,
     "down": 248,
     "flat": 1,
@@ -4958,7 +4946,7 @@
   {
     "session": "2026-05-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 232,
     "down": 265,
     "flat": 4,
@@ -4970,7 +4958,7 @@
   {
     "session": "2026-05-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 238,
     "down": 263,
     "flat": 1,
@@ -4982,7 +4970,7 @@
   {
     "session": "2026-05-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 196,
     "down": 306,
     "flat": 0,
@@ -4994,7 +4982,7 @@
   {
     "session": "2026-06-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 209,
     "down": 293,
     "flat": 0,
@@ -5006,7 +4994,7 @@
   {
     "session": "2026-06-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 260,
     "down": 241,
     "flat": 1,
@@ -5018,7 +5006,7 @@
   {
     "session": "2026-06-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 202,
     "down": 298,
     "flat": 2,
@@ -5030,7 +5018,7 @@
   {
     "session": "2026-06-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 359,
     "down": 142,
     "flat": 1,
@@ -5042,7 +5030,7 @@
   {
     "session": "2026-06-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 232,
     "down": 270,
     "flat": 0,
@@ -5054,7 +5042,7 @@
   {
     "session": "2026-06-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 180,
     "down": 321,
     "flat": 1,
@@ -5066,7 +5054,7 @@
   {
     "session": "2026-06-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 370,
     "down": 131,
     "flat": 1,
@@ -5078,7 +5066,7 @@
   {
     "session": "2026-06-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 171,
     "down": 330,
     "flat": 1,
@@ -5090,7 +5078,7 @@
   {
     "session": "2026-06-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 323,
     "down": 177,
     "flat": 2,
@@ -5102,7 +5090,7 @@
   {
     "session": "2026-06-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 393,
     "down": 109,
     "flat": 0,
@@ -5114,7 +5102,7 @@
   {
     "session": "2026-06-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 261,
     "down": 240,
     "flat": 1,
@@ -5126,7 +5114,7 @@
   {
     "session": "2026-06-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 272,
     "down": 231,
     "flat": 0,
@@ -5138,7 +5126,7 @@
   {
     "session": "2026-06-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 74,
     "down": 428,
     "flat": 1,
@@ -5150,7 +5138,7 @@
   {
     "session": "2026-06-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 265,
     "down": 237,
     "flat": 1,
@@ -5162,7 +5150,7 @@
   {
     "session": "2026-06-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 266,
     "down": 236,
     "flat": 1,
@@ -5174,7 +5162,7 @@
   {
     "session": "2026-06-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 282,
     "down": 220,
     "flat": 1,
@@ -5186,7 +5174,7 @@
   {
     "session": "2026-06-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 320,
     "down": 180,
     "flat": 3,
@@ -5198,7 +5186,7 @@
   {
     "session": "2026-06-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 302,
     "down": 201,
     "flat": 0,
@@ -5210,7 +5198,7 @@
   {
     "session": "2026-06-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 319,
     "down": 182,
     "flat": 2,
@@ -5222,7 +5210,7 @@
   {
     "session": "2026-06-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 230,
     "down": 271,
     "flat": 2,
@@ -5234,7 +5222,7 @@
   {
     "session": "2026-06-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 213,
     "down": 289,
     "flat": 1,
@@ -5246,7 +5234,7 @@
   {
     "session": "2026-07-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 297,
     "down": 206,
     "flat": 0,
@@ -5258,7 +5246,7 @@
   {
     "session": "2026-07-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 357,
     "down": 145,
     "flat": 1,
@@ -5270,7 +5258,7 @@
   {
     "session": "2026-07-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 222,
     "down": 279,
     "flat": 2,
@@ -5282,7 +5270,7 @@
   {
     "session": "2026-07-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 282,
     "down": 220,
     "flat": 1,
@@ -5294,7 +5282,7 @@
   {
     "session": "2026-07-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 112,
     "down": 391,
     "flat": 0,
@@ -5306,7 +5294,7 @@
   {
     "session": "2026-07-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 302,
     "down": 201,
     "flat": 0,
@@ -5318,7 +5306,7 @@
   {
     "session": "2026-07-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 336,
     "down": 165,
     "flat": 2,
@@ -5330,7 +5318,7 @@
   {
     "session": "2026-07-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 272,
     "down": 231,
     "flat": 0,
@@ -5342,7 +5330,7 @@
   {
     "session": "2026-07-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 206,
     "down": 294,
     "flat": 3,
@@ -5354,7 +5342,7 @@
   {
     "session": "2026-07-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 253,
     "down": 250,
     "flat": 0,
@@ -5366,7 +5354,7 @@
   {
     "session": "2026-07-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 368,
     "down": 134,
     "flat": 1,
@@ -5378,7 +5366,7 @@
   {
     "session": "2026-07-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 148,
     "down": 355,
     "flat": 0,
@@ -5390,7 +5378,7 @@
   {
     "session": "2026-07-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 163,
     "down": 339,
     "flat": 1,
@@ -5402,7 +5390,7 @@
   {
     "session": "2026-07-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 233,
     "down": 267,
     "flat": 3,
@@ -5414,7 +5402,7 @@
   {
     "session": "2026-07-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 246,
     "down": 253,
     "flat": 4,
@@ -5426,7 +5414,7 @@
   {
     "session": "2026-07-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 213,
     "down": 290,
     "flat": 0,
@@ -5438,7 +5426,7 @@
   {
     "session": "2026-07-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 360,
     "down": 143,
     "flat": 0,
@@ -5450,7 +5438,7 @@
   {
     "session": "2026-07-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 328,
     "down": 175,
     "flat": 0,
@@ -5462,7 +5450,7 @@
   {
     "session": "2026-07-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 354,
     "down": 148,
     "flat": 1,
@@ -5474,7 +5462,7 @@
   {
     "session": "2026-07-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 179,
     "down": 324,
     "flat": 0,
@@ -5486,7 +5474,7 @@
   {
     "session": "2026-07-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 201,
     "down": 300,
     "flat": 2,
@@ -5498,7 +5486,7 @@
   {
     "session": "2026-07-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 221,
     "down": 281,
     "flat": 1,
@@ -5510,7 +5498,7 @@
   {
     "session": "2026-08-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 339,
     "down": 164,
     "flat": 0,
@@ -5522,7 +5510,7 @@
   {
     "session": "2026-08-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 360,
     "down": 140,
     "flat": 3,
@@ -5534,7 +5522,7 @@
   {
     "session": "2026-08-05",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 244,
     "down": 259,
     "flat": 0,
@@ -5546,7 +5534,7 @@
   {
     "session": "2026-08-06",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 202,
     "down": 299,
     "flat": 2,
@@ -5558,7 +5546,7 @@
   {
     "session": "2026-08-07",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 320,
     "down": 181,
     "flat": 2,
@@ -5570,7 +5558,7 @@
   {
     "session": "2026-08-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 232,
     "down": 268,
     "flat": 3,
@@ -5582,7 +5570,7 @@
   {
     "session": "2026-08-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 276,
     "down": 225,
     "flat": 2,
@@ -5594,7 +5582,7 @@
   {
     "session": "2026-08-12",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 264,
     "down": 238,
     "flat": 1,
@@ -5606,7 +5594,7 @@
   {
     "session": "2026-08-13",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 317,
     "down": 185,
     "flat": 1,
@@ -5618,7 +5606,7 @@
   {
     "session": "2026-08-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 250,
     "down": 245,
     "flat": 8,
@@ -5630,7 +5618,7 @@
   {
     "session": "2026-08-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 134,
     "down": 367,
     "flat": 2,
@@ -5642,7 +5630,7 @@
   {
     "session": "2026-08-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 224,
     "down": 276,
     "flat": 3,
@@ -5654,7 +5642,7 @@
   {
     "session": "2026-08-19",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 283,
     "down": 219,
     "flat": 1,
@@ -5666,7 +5654,7 @@
   {
     "session": "2026-08-20",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 157,
     "down": 342,
     "flat": 4,
@@ -5678,7 +5666,7 @@
   {
     "session": "2026-08-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 332,
     "down": 169,
     "flat": 2,
@@ -5690,7 +5678,7 @@
   {
     "session": "2026-08-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 303,
     "down": 197,
     "flat": 3,
@@ -5702,7 +5690,7 @@
   {
     "session": "2026-08-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 210,
     "down": 291,
     "flat": 2,
@@ -5714,7 +5702,7 @@
   {
     "session": "2026-08-26",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 284,
     "down": 217,
     "flat": 2,
@@ -5726,7 +5714,7 @@
   {
     "session": "2026-08-27",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 152,
     "down": 349,
     "flat": 2,
@@ -5738,7 +5726,7 @@
   {
     "session": "2026-08-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 227,
     "down": 275,
     "flat": 1,
@@ -5750,7 +5738,7 @@
   {
     "session": "2026-08-31",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 135,
     "down": 363,
     "flat": 5,
@@ -5762,7 +5750,7 @@
   {
     "session": "2026-09-01",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 159,
     "down": 342,
     "flat": 2,
@@ -5774,7 +5762,7 @@
   {
     "session": "2026-09-02",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 300,
     "down": 202,
     "flat": 1,
@@ -5786,7 +5774,7 @@
   {
     "session": "2026-09-03",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 340,
     "down": 161,
     "flat": 2,
@@ -5798,7 +5786,7 @@
   {
     "session": "2026-09-04",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 176,
     "down": 326,
     "flat": 1,
@@ -5810,7 +5798,7 @@
   {
     "session": "2026-09-08",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 148,
     "down": 354,
     "flat": 1,
@@ -5822,7 +5810,7 @@
   {
     "session": "2026-09-09",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 98,
     "down": 405,
     "flat": 0,
@@ -5834,7 +5822,7 @@
   {
     "session": "2026-09-10",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 166,
     "down": 333,
     "flat": 4,
@@ -5846,7 +5834,7 @@
   {
     "session": "2026-09-11",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 337,
     "down": 166,
     "flat": 0,
@@ -5858,7 +5846,7 @@
   {
     "session": "2026-09-14",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 282,
     "down": 220,
     "flat": 1,
@@ -5870,7 +5858,7 @@
   {
     "session": "2026-09-15",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 158,
     "down": 344,
     "flat": 1,
@@ -5882,7 +5870,7 @@
   {
     "session": "2026-09-16",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 162,
     "down": 339,
     "flat": 2,
@@ -5894,7 +5882,7 @@
   {
     "session": "2026-09-17",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 295,
     "down": 205,
     "flat": 3,
@@ -5906,7 +5894,7 @@
   {
     "session": "2026-09-18",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 156,
     "down": 346,
     "flat": 1,
@@ -5918,7 +5906,7 @@
   {
     "session": "2026-09-21",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 291,
     "down": 210,
     "flat": 2,
@@ -5930,7 +5918,7 @@
   {
     "session": "2026-09-22",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 249,
     "down": 253,
     "flat": 1,
@@ -5942,7 +5930,7 @@
   {
     "session": "2026-09-23",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 170,
     "down": 332,
     "flat": 1,
@@ -5954,7 +5942,7 @@
   {
     "session": "2026-09-24",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 176,
     "down": 326,
     "flat": 1,
@@ -5966,7 +5954,7 @@
   {
     "session": "2026-09-25",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 329,
     "down": 172,
     "flat": 2,
@@ -5978,7 +5966,7 @@
   {
     "session": "2026-09-28",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 164,
     "down": 335,
     "flat": 4,
@@ -5990,7 +5978,7 @@
   {
     "session": "2026-09-29",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
+    "generated_at": "2026-09-30T22:19:54+00:00",
     "up": 197,
     "down": 301,
     "flat": 5,
@@ -6002,13 +5990,55 @@
   {
     "session": "2026-09-30",
     "status": "closed",
-    "generated_at": "2026-09-30T18:16:53+00:00",
-    "up": 171,
-    "down": 331,
-    "flat": 1,
+    "generated_at": "2026-09-30T22:19:05+00:00",
+    "up": 114,
+    "down": 389,
+    "flat": 0,
     "missing": 0,
     "total": 503,
-    "up_pct": 34.0,
-    "down_pct": 65.81
+    "up_pct": 22.66,
+    "down_pct": 77.34,
+    "examples": [
+      {
+        "ticker": "A",
+        "price": 172.31,
+        "change_pct": -1.554
+      },
+      {
+        "ticker": "AAPL",
+        "price": 333.02,
+        "change_pct": 1.099
+      },
+      {
+        "ticker": "ABBV",
+        "price": 261.59,
+        "change_pct": -0.646
+      },
+      {
+        "ticker": "ABNB",
+        "price": 160.65,
+        "change_pct": 2.351
+      },
+      {
+        "ticker": "ABT",
+        "price": 98.83,
+        "change_pct": -2.1
+      },
+      {
+        "ticker": "ACGL",
+        "price": 92.36,
+        "change_pct": -2.902
+      },
+      {
+        "ticker": "ACN",
+        "price": 183.37,
+        "change_pct": 3.529
+      },
+      {
+        "ticker": "ADBE",
+        "price": 239.94,
+        "change_pct": 2.903
+      }
+    ]
   }
 ]
