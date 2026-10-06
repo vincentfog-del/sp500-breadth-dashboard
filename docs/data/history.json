@@ -6044,13 +6044,13 @@
   {
     "session": "2026-10-05",
     "status": "closed",
-    "generated_at": "2026-10-05T21:01:51+00:00",
-    "up": 317,
+    "generated_at": "2026-10-06T01:39:47+00:00",
+    "up": 316,
     "down": 183,
-    "flat": 3,
+    "flat": 4,
     "missing": 0,
     "total": 503,
-    "up_pct": 63.02,
+    "up_pct": 62.82,
     "down_pct": 36.38,
     "examples": [
       {
@@ -6090,8 +6090,8 @@
       },
       {
         "ticker": "ADBE",
-        "price": 238.785,
-        "change_pct": 0.461
+        "price": 238.79,
+        "change_pct": 0.463
       }
     ]
   }
