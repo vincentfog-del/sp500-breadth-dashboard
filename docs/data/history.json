@@ -6314,14 +6314,14 @@
   {
     "session": "2026-10-12",
     "status": "closed",
-    "generated_at": "2026-10-12T21:32:21+00:00",
+    "generated_at": "2026-10-13T02:43:22+00:00",
     "up": 321,
-    "down": 179,
-    "flat": 3,
+    "down": 178,
+    "flat": 4,
     "missing": 0,
     "total": 503,
     "up_pct": 63.82,
-    "down_pct": 35.59,
+    "down_pct": 35.39,
     "examples": [
       {
         "ticker": "A",
