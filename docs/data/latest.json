@@ -1,14 +1,14 @@
 {
   "session": "2026-10-22",
   "status": "closed",
-  "generated_at": "2026-10-22T21:09:52+00:00",
-  "up": 335,
-  "down": 166,
-  "flat": 1,
-  "missing": 1,
-  "total": 502,
-  "up_pct": 66.73,
-  "down_pct": 33.07,
+  "generated_at": "2026-10-22T23:59:28+00:00",
+  "up": 322,
+  "down": 155,
+  "flat": 26,
+  "missing": 0,
+  "total": 503,
+  "up_pct": 64.02,
+  "down_pct": 30.82,
   "examples": [
     {
       "ticker": "A",
@@ -36,6 +36,11 @@
       "change_pct": 1.99
     },
     {
+      "ticker": "ACGL",
+      "price": 102.69,
+      "change_pct": 2.403
+    },
+    {
       "ticker": "ACN",
       "price": 258.74,
       "change_pct": 7.692
@@ -44,11 +49,6 @@
       "ticker": "ADBE",
       "price": 270.55,
       "change_pct": 6.073
-    },
-    {
-      "ticker": "ADI",
-      "price": 385.76,
-      "change_pct": -4.976
     }
   ]
 }
