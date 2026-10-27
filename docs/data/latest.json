@@ -1,55 +1,54 @@
 {
   "session": "2026-10-27",
-  "status": "intraday",
-  "generated_at": "2026-10-27T18:33:32+00:00",
-  "up": 219,
-  "down": 284,
-  "flat": 0,
+  "status": "closed",
+  "generated_at": "2026-10-27T22:37:49+00:00",
+  "up": 245,
+  "down": 257,
+  "flat": 1,
   "missing": 0,
   "total": 503,
-  "up_pct": 43.54,
-  "down_pct": 56.46,
+  "up_pct": 48.71,
+  "down_pct": 51.09,
   "examples": [
     {
       "ticker": "A",
-      "price": 177.94,
-      "change_pct": 1.125
+      "price": 177.49,
+      "change_pct": 0.87
     },
     {
       "ticker": "AAPL",
-      "price": 345.51,
-      "change_pct": 0.465
+      "price": 347.1,
+      "change_pct": 0.928
     },
     {
       "ticker": "ABBV",
-      "price": 286.22,
-      "change_pct": -0.181
+      "price": 286.39,
+      "change_pct": -0.122
     },
     {
       "ticker": "ABNB",
-      "price": 168.45,
-      "change_pct": -1.52
+      "price": 168.82,
+      "change_pct": -1.304
     },
     {
       "ticker": "ABT",
-      "price": 103.67,
-      "change_pct": -1.154
+      "price": 103.1,
+      "change_pct": -1.697
     },
     {
       "ticker": "ACGL",
-      "price": 100.06,
-      "change_pct": -2.228
+      "price": 100.34,
+      "change_pct": -1.954
     },
     {
       "ticker": "ACN",
-      "price": 235.935,
-      "change_pct": -4.569
+      "price": 235.16,
+      "change_pct": -4.882
     },
     {
       "ticker": "ADBE",
-      "price": 249.04,
-      "change_pct": -3.704
+      "price": 248.36,
+      "change_pct": -3.967
     }
-  ],
-  "minute": "2026-10-27T18:33"
+  ]
 }
