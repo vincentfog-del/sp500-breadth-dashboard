@@ -1,56 +1,55 @@
 {
-  "session": "2026-11-19",
-  "status": "closed",
-  "generated_at": "2026-11-19T21:09:33+00:00",
-  "up": 40,
-  "down": 463,
-  "flat": 0,
+  "session": "2026-11-20",
+  "status": "intraday",
+  "generated_at": "2026-11-20T20:54:24+00:00",
+  "up": 130,
+  "down": 370,
+  "flat": 3,
   "missing": 0,
   "total": 503,
-  "up_pct": 7.95,
-  "down_pct": 92.05,
+  "up_pct": 25.84,
+  "down_pct": 73.56,
   "examples": [
     {
       "ticker": "A",
-      "price": 175.35,
-      "change_pct": -1.117
+      "price": 169.58,
+      "change_pct": -3.285
     },
     {
       "ticker": "AAPL",
-      "price": 349.21,
-      "change_pct": -0.919
+      "price": 342.77,
+      "change_pct": -1.844
     },
     {
       "ticker": "ABBV",
-      "price": 283.51,
-      "change_pct": -0.874
+      "price": 286.24,
+      "change_pct": 0.952
     },
     {
       "ticker": "ABNB",
-      "price": 172.79,
-      "change_pct": -4.117
+      "price": 170.12,
+      "change_pct": -1.545
     },
     {
       "ticker": "ABT",
-      "price": 103.965,
-      "change_pct": -0.493
+      "price": 102.96,
+      "change_pct": -0.876
     },
     {
       "ticker": "ACGL",
-      "price": 108.16,
-      "change_pct": -0.423
+      "price": 108.805,
+      "change_pct": 0.596
     },
     {
       "ticker": "ACN",
-      "price": 218.7,
-      "change_pct": -3.864
+      "price": 221.1282,
+      "change_pct": 1.166
     },
     {
       "ticker": "ADBE",
-      "price": 221.68,
-      "change_pct": -1.998
+      "price": 218.16,
+      "change_pct": -1.588
     }
   ],
-  "stale": true,
-  "data_warning": "即時報價出現異常大量平盤，已略過這筆資料並保留上一筆有效數據。"
+  "minute": "2026-11-20T20:54"
 }
