@@ -1,14 +1,14 @@
 {
   "session": "2026-11-25",
   "status": "closed",
-  "generated_at": "2026-11-25T22:07:27+00:00",
+  "generated_at": "2026-11-26T22:05:59+00:00",
   "up": 371,
-  "down": 129,
-  "flat": 3,
+  "down": 128,
+  "flat": 4,
   "missing": 0,
   "total": 503,
   "up_pct": 73.76,
-  "down_pct": 25.65,
+  "down_pct": 25.45,
   "examples": [
     {
       "ticker": "A",
